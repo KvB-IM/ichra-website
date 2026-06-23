@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is ICHRA? | ICHRA Masters</title>
+    <title>What is an ICHRA and Why Should Health Insurance Brokers Care? | ICHRA Masters Blog</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -220,6 +220,98 @@
 
     <!-- Professional Footer -->
         <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
+                <p class="footer-tagline">Built for Agents, By Agents.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="lies.html">The Lies</a>
+                    <a href="model.html">The Model</a>
+                    <a href="https://agents.ichramasters.com/login">Agent Portal</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Strategy Call</a>
+                    <a href="blogs.html">Insights</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="mailto:service@ichramasters.com" style="color: var(--accent-gold-light); font-weight: 500;">service@ichramasters.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ICHRA Masters. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 85%",
+                },
+                y: 30,
+                autoAlpha: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.top-navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+
+    <main class="content-wrapper">
+        <header class="inner-page-header gs-reveal" style="padding: 8rem 5% 3rem; background: var(--brand-blue); color: #ffffff; text-align: center;">
+            <h1 class="modern-title" style="color: #ffffff; font-size: clamp(2rem, 4vw, 3.5rem); max-width: 900px; margin: 0 auto;">What is an ICHRA and Why Should Health Insurance Brokers Care?</h1>
+            <p style="color: var(--accent-gold-light); margin-top: 1rem; font-family: Georgia, serif; font-style: italic;">Oct 12, 2026 • By ICHRA Masters</p>
+        </header>
+        <section class="lesson-section" style="padding: 4rem 5%;">
+            <div class="container" style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; color: var(--text-slate);">
+                <p style="font-size: 1.25rem; font-weight: 500; color: var(--text-dark); margin-bottom: 2rem;">Discover how ICHRAs are transforming the health insurance market and why licensed agents must adapt to stay ahead.</p>
+                
+            <h3>The Shift to Defined Contribution</h3>
+            <p>The Individual Coverage Health Reimbursement Arrangement (ICHRA) is rapidly transforming the health insurance landscape. For decades, the traditional group health insurance model defined the market: employers selected a single, one-size-fits-all plan (or a narrow set of options) and defined the benefits for their entire workforce. However, as premium costs soar and workforce needs diversify, this model is showing its age.</p>
+            <p>ICHRA flips this script. It moves employers away from a defined benefit model to a <strong>defined contribution</strong> model. Employers simply set a tax-free monthly allowance, and employees use those funds to purchase their own individual health insurance policies on the open market.</p>
+            
+            <h3>Why Brokers Must Pay Attention</h3>
+            <p>For health insurance brokers, ICHRA is not just a passing trend—it is a structural market shift. Employers who previously could not afford to offer group benefits can now enter the market using ICHRAs. This represents a massive expansion of the addressable market for brokers.</p>
+            <p>However, the rise of ICHRA has also brought new threats. Many third-party platforms are using ICHRA as a Trojan horse to disintermediate the broker. They frame ICHRA as "too complicated" and insist that employers use their platform—requiring the broker to sign over their Agent of Record (AOR). Brokers must understand ICHRA deeply so they can offer it to their clients <em>without</em> giving up control of their book of business.</p>
+        
+                
+                <div style="margin-top: 4rem; padding: 2rem; background: #f8fafc; border-left: 4px solid var(--accent-gold-dark); border-radius: 0 12px 12px 0;">
+                    <h4 style="color: var(--text-dark); margin-bottom: 1rem;">Ready to take control of your book of business?</h4>
+                    <p style="margin-bottom: 1.5rem;">Don't let third-party platforms steal your AOR. Talk to an Architect today and discover how our white-labeled platform puts you back in the driver's seat.</p>
+                    <a href="contact.html" class="glass-btn primary" style="background: var(--brand-blue); color: #ffffff; border: none; padding: 0.8rem 2rem;">Schedule a Strategy Call</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="modern-footer">
         <div class="footer-container">
             <div class="footer-brand">
                 <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />

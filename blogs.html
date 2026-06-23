@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broker Guide | ICHRA Masters</title>
+    <title>Insights & Articles | ICHRA Masters</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -19,94 +19,114 @@
             text-align: center;
         }
         
-        .blog-section {
+        .lesson-section {
             padding: 6rem 5%;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
+        
+        .lesson-intro {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 4rem;
         }
 
-        .blog-card {
+        .how-it-works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+
+        .how-card {
             background: #ffffff;
             border: 1px solid var(--border-light);
             border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 2.5rem;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .blog-card:hover {
+        .how-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
         }
 
-        .blog-image {
-            height: 220px;
-            background: #f8fafc;
+        .how-card .icon-circle {
+            width: 48px;
+            height: 48px;
+            background: rgba(198, 161, 91, 0.1);
+            color: var(--accent-gold-dark);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-bottom: 1px solid var(--border-light);
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 1.5rem;
         }
 
-        .blog-image::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle, rgba(198, 161, 91, 0.1) 0%, transparent 70%);
-        }
-
-        .blog-image span {
-            font-family: Georgia, serif;
-            font-size: 2rem;
-            color: var(--brand-blue);
-            opacity: 0.3;
-            font-weight: bold;
-            font-style: italic;
-        }
-
-        .blog-content {
-            padding: 2.5rem;
-        }
-
-        .blog-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--text-main);
+        .how-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
             font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 1rem;
         }
 
-        .blog-content p {
+        .how-card p {
             color: var(--text-muted);
-            margin-bottom: 2rem;
             line-height: 1.6;
         }
 
-        .read-more {
-            color: var(--accent-gold-dark);
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 0.95rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: color 0.3s ease;
+        .lesson-conclusion {
+            background: #f8fafc;
+            border-left: 4px solid var(--accent-gold-dark);
+            padding: 2rem;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 6rem;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            font-weight: 500;
+            line-height: 1.7;
         }
 
-        .read-more:hover {
-            color: var(--brand-blue);
+        .table-section-title {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
         }
     </style>
+
+    <!-- JSON-LD Structured Data for AI/SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ICHRA Masters",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "An ICHRA platform engineered for licensed health insurance agents to manage quoting, enrollment, and client relationships while retaining 100% of their commissions and Agent of Record (AOR).",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ICHRA Masters",
+        "url": "https://ichramasters.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "service@ichramasters.com",
+          "contactType": "customer support"
+        }
+      }
+    }
+    </script>
 </head>
+
 <body class="modern-body">
 
     <!-- Top Navigation -->
@@ -125,46 +145,230 @@
     </nav>
 
     <header class="inner-page-header gs-reveal">
-        <div class="accent-mark" style="margin: 0 auto 1.5rem; text-align: center;">✦</div>
-        <h1 class="modern-title" style="color: #ffffff;">Field Guide & <span class="text-gradient-gold">Intelligence.</span></h1>
-        <p class="section-text" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">
-            Resources, pitches, and compliance guides to help you own the ICHRA conversation.
-        </p>
+        <h1 class="modern-title" style="color: #ffffff;">What is an <span class="text-gradient-gold">ICHRA?</span></h1>
     </header>
 
-    <section class="blog-section">
-        <div class="blog-grid">
-            <div class="blog-card gs-reveal">
-                <div class="blog-image"><span>Guide</span></div>
-                <div class="blog-content">
-                    <h3>Don't Buy the Lie</h3>
-                    <p>The Broker's Field Guide to Owning ICHRA (Without Giving Up Your Agent of Record).</p>
-                    <a href="#" class="read-more">Read the Guide &rarr;</a>
-                </div>
-            </div>
+    <section class="lesson-section">
+        <p class="lesson-intro gs-reveal">
+            An <strong>Individual Coverage Health Reimbursement Arrangement (ICHRA)</strong> represents a major shift away from the traditional defined benefit model — where an employer selects a single group health plan for everyone — to a defined contribution strategy instead. With an ICHRA, employers set a fixed, tax-free monthly allowance for each employee to buy their own individual health insurance. This empowers employees to choose plans that truly fit their needs and budgets. The result is greater flexibility for workers and more cost control and predictability for employers.
+        </p>
 
-            <div class="blog-card gs-reveal">
-                <div class="blog-image"><span>Script</span></div>
-                <div class="blog-content">
-                    <h3>The 3-Sentence Pitch</h3>
-                    <p>Most brokers over-explain ICHRA. Here is the 3-sentence version that actually works to close employers.</p>
-                    <a href="#" class="read-more">Get the Script &rarr;</a>
+        <h2 class="section-title text-center gs-reveal" style="font-size: 2.5rem; margin-bottom: 3rem;">How it works:</h2>
+        
+        <div class="how-it-works-grid">
+            <div class="how-card gs-reveal">
+                <div class="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
                 </div>
+                <h3>Employers Don't Choose The Plan</h3>
+                <p>Instead, they set a fixed, tax-free monthly reimbursement allowance for each employee based on classes.</p>
             </div>
+            <div class="how-card gs-reveal">
+                <div class="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                </div>
+                <h3>Employees Take Control</h3>
+                <p>They shop for and buy their own individual health insurance plan through the ACA Marketplace that fits them perfectly.</p>
+            </div>
+            <div class="how-card gs-reveal">
+                <div class="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <h3>Reimbursement Made Simple</h3>
+                <p>Employees submit proof of premium payments and are reimbursed up to their allowance amount. A third party handles administration and compliance.</p>
+            </div>
+        </div>
 
-            <div class="blog-card gs-reveal">
-                <div class="blog-image"><span>Compliance</span></div>
-                <div class="blog-content">
-                    <h3>What Triggers ACA Penalties</h3>
-                    <p>The compliance question every CFO asks. Learn the three things that determine compliance for ALEs.</p>
-                    <a href="#" class="read-more">Learn Compliance &rarr;</a>
-                </div>
-            </div>
+        <div class="lesson-conclusion gs-reveal">
+            This model moves employers out of the business of picking health plans and into the role of a financial supporter, empowering employees to choose coverage that fits their needs.
+        </div>
+
+        <h2 class="table-section-title gs-reveal">How ICHRA Differs from Traditional Group Insurance</h2>
+        <div class="comparison-table-wrapper gs-reveal">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th width="50%">Traditional Group Plan</th>
+                        <th width="50%">ICHRA (The New Model)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Employer selects one or more group plans for everyone</td>
+                        <td>Employer sets a defined dollar allowance; employees choose any plan they want</td>
+                    </tr>
+                    <tr>
+                        <td>Premiums are based on the group’s collective risk</td>
+                        <td>Premiums are based on each employee’s age, location, and plan choice</td>
+                    </tr>
+                    <tr>
+                        <td>One-stage group quote</td>
+                        <td>Two-stage quoting: employer contribution first, then each employee’s plan</td>
+                    </tr>
+                    <tr>
+                        <td>All employees in a class share the same plan options</td>
+                        <td>Employers can set different allowances for different employee classes (e.g., full-time vs. part-time)</td>
+                    </tr>
+                    <tr>
+                        <td>Managed under a single group master policy</td>
+                        <td>Employees enroll individually into separate plans</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
     <!-- Professional Footer -->
         <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
+                <p class="footer-tagline">Built for Agents, By Agents.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="lies.html">The Lies</a>
+                    <a href="model.html">The Model</a>
+                    <a href="https://agents.ichramasters.com/login">Agent Portal</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Strategy Call</a>
+                    <a href="blogs.html">Insights</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="mailto:service@ichramasters.com" style="color: var(--accent-gold-light); font-weight: 500;">service@ichramasters.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ICHRA Masters. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 85%",
+                },
+                y: 30,
+                autoAlpha: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.top-navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+
+    <main class="content-wrapper">
+        <header class="inner-page-header gs-reveal" style="padding: 8rem 5% 4rem; background: var(--brand-blue); color: #ffffff; text-align: center;">
+            <h1 class="modern-title" style="color: #ffffff;">Industry <span class="text-gradient-gold">Insights</span></h1>
+            <p style="max-width: 600px; margin: 1.5rem auto 0; color: #cbd5e1; font-size: 1.2rem;">Expert strategies, market analysis, and actionable advice for licensed health insurance agents navigating the ICHRA landscape.</p>
+        </header>
+        <section class="lesson-section" style="padding: 5rem 5%; background: var(--bg-light);">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2.5rem;">
+                    
+            <a href="what-is-ichra-brokers-care.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Oct 12, 2026</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">What is an ICHRA and Why Should Health Insurance Brokers Care?</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1;">Discover how ICHRAs are transforming the health insurance market and why licensed agents must adapt to stay ahead.</p>
+                <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
+            </a>
+    
+            <a href="the-3-biggest-lies-in-ichra.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Oct 15, 2026</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">The 3 Biggest Lies in the ICHRA Industry</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1;">Don't buy the lie. Learn how third-party platforms use misinformation to steal your Agent of Record (AOR).</p>
+                <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
+            </a>
+    
+            <a href="transitioning-book-of-business-ichra.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Oct 18, 2026</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">How to Transition Your Book of Business from Group Plans to ICHRA</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1;">A strategic guide for licensed health insurance agents looking to transition employer groups to the ICHRA model.</p>
+                <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
+            </a>
+    
+            <a href="ichra-masters-model-keep-100-commissions.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Oct 21, 2026</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">The ICHRA Masters Model: Keep 100% of Your Commissions and AOR</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1;">Discover how the ICHRA Masters platform was built by agents, for agents, to protect your revenue.</p>
+                <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
+            </a>
+    
+            <a href="why-employers-shifting-defined-contribution.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Oct 25, 2026</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">Why Employers are Shifting to the Defined Contribution Health Model</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1;">Predictability and choice are driving a massive shift in how businesses offer health benefits.</p>
+                <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
+            </a>
+    
+            <a href="ichra-vs-traditional-group-insurance.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Oct 28, 2026</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">ICHRA vs. Traditional Group Insurance: A Broker's Comparison</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1;">A deep dive into the structural differences between ICHRAs and traditional group health plans.</p>
+                <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
+            </a>
+    
+            <a href="step-by-step-ichra-quotes-enrollments.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Nov 2, 2026</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">Step-by-Step: Managing ICHRA Quotes and Enrollments on One Platform</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1;">See how simple it is to quote, model, and enroll an ICHRA when you have the right software infrastructure.</p>
+                <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
+            </a>
+    
+            <a href="protecting-agency-future-third-party-ichra.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Nov 5, 2026</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">Protecting Your Agency's Future from Third-Party ICHRA Platforms</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1;">How to spot predatory platforms that are trying to disintermediate brokers and steal books of business.</p>
+                <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
+            </a>
+    
+            <a href="financial-benefits-ichra-smbs.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Nov 8, 2026</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">The Financial Benefits of ICHRAs for Small and Mid-Sized Businesses</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1;">Why SMBs are the fastest-growing adopters of Individual Coverage Health Reimbursement Arrangements.</p>
+                <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
+            </a>
+    
+            <a href="ultimate-ichra-toolkit-licensed-agents.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Nov 12, 2026</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">The Ultimate ICHRA Toolkit: What Every Licensed Agent Needs to Succeed</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1;">Equip yourself with the right software, knowledge, and strategies to dominate the ICHRA market.</p>
+                <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
+            </a>
+    
+                </div>
+            </div>
+        </section>
+    </main>
+<footer class="modern-footer">
         <div class="footer-container">
             <div class="footer-brand">
                 <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
