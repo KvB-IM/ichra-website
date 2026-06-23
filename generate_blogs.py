@@ -186,7 +186,7 @@ blogs = [
 ]
 
 template_html = ""
-with open("what-is-ichra.html", "r", encoding="utf-8") as f:
+with open("index.html", "r", encoding="utf-8") as f:
     template_html = f.read()
 
 # Extract header, nav, footer
