@@ -584,9 +584,10 @@ h1, h2, h3, .serif {
 
 /* Professional Footer (Dark Contrast) */
 .modern-footer {
-    background: var(--bg-dark);
+    background: #0a2440;
     padding: 5rem 5% 2rem;
     margin-top: 5rem;
+    border-top: 4px solid var(--accent-gold-dark);
 }
 
 .footer-container {
@@ -618,16 +619,18 @@ h1, h2, h3, .serif {
 }
 
 .footer-col h4 {
-    color: var(--bg-white);
+    color: var(--accent-gold-light);
     font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     margin-bottom: 1.5rem;
 }
 
 .footer-col a {
     display: block;
-    color: #94a3b8;
+    color: #cbd5e1;
     text-decoration: none;
     margin-bottom: 0.8rem;
     font-size: 0.95rem;
