@@ -227,7 +227,7 @@ for blog in blogs:
 blogs_grid = ""
 for blog in blogs:
     blogs_grid += f'''
-            <a href="{blog["slug"]}.html" class="lie-card gs-reveal blog-card" data-category="{blog["category"].replace(" ", "-").lower()}" style="text-decoration: none; display: flex; flex-direction: column; background: #ffffff;">
+            <a href="{blog["slug"]}.html" class="lie-card gs-reveal blog-card" data-category="{blog["category"].replace(" ", "-").lower()}" style="text-decoration: none; display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.8);">
                 <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">{blog["category"]}</span>
                 <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem; color: #0a2440;">{blog["title"]}</h3>
                 <p style="margin-bottom: 1.5rem; flex-grow: 1; color: #475569;">{blog["excerpt"]}</p>
@@ -244,10 +244,10 @@ blogs_index_content = f'''
         <section class="lesson-section" style="padding: 3rem 5% 5rem; background: var(--bg-light);">
             <div class="container" style="max-width: 1500px; margin: 0 auto;">
                 <div class="filter-nav" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
-                    <button class="filter-btn active" data-filter="all" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #0a2440; color: #ffffff; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">All</button>
-                    <button class="filter-btn" data-filter="broker-strategy" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #ffffff; color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Broker Strategy</button>
-                    <button class="filter-btn" data-filter="market-trends" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #ffffff; color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Market Trends</button>
-                    <button class="filter-btn" data-filter="platform-guide" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #ffffff; color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Platform Guide</button>
+                    <button class="filter-btn active" data-filter="all" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid rgba(255,255,255,0.8); background: #0a2440; color: #ffffff; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">All</button>
+                    <button class="filter-btn" data-filter="broker-strategy" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid rgba(255,255,255,0.8); background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">Broker Strategy</button>
+                    <button class="filter-btn" data-filter="market-trends" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid rgba(255,255,255,0.8); background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">Market Trends</button>
+                    <button class="filter-btn" data-filter="platform-guide" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid rgba(255,255,255,0.8); background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">Platform Guide</button>
                 </div>
                 
                 <div class="blogs-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem;">
@@ -266,7 +266,7 @@ blogs_index_content = f'''
                 btn.addEventListener('click', () => {{
                     // Update active state
                     filterBtns.forEach(b => {{
-                        b.style.background = '#ffffff';
+                        b.style.background = 'rgba(255, 255, 255, 0.6)';
                         b.style.color = '#0a2440';
                         b.classList.remove('active');
                     }});

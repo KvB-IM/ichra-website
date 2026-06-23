@@ -96,8 +96,9 @@ h1, h2, h3, .serif {
 
 .top-navbar.scrolled {
     padding: 1rem 5%;
-    background: var(--brand-blue);
+    background: rgba(10, 36, 64, 0.85); /* Dark navy translucent */
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
@@ -394,7 +395,9 @@ h1, h2, h3, .serif {
 
 .feature-card {
     padding: 2.5rem;
-    background: #f8fafc;
+    background: rgba(248, 250, 252, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--border-light);
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -507,20 +510,23 @@ h1, h2, h3, .serif {
     align-items: center;
     justify-content: center;
     padding: 1rem 2rem;
-    background: var(--bg-white);
-    border: 1px solid var(--border-light);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     color: var(--text-dark);
     text-decoration: none;
     border-radius: 8px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .glass-btn:hover {
-    background: var(--bg-light);
+    background: rgba(255, 255, 255, 0.9);
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .glass-btn.primary {
@@ -549,12 +555,14 @@ h1, h2, h3, .serif {
 
 /* Modern Cards */
 .lie-card {
-    background: var(--bg-white);
-    border: 1px solid var(--border-light);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 12px;
     padding: 3rem 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
 }
 
 .lie-card:hover {
