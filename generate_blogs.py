@@ -5,7 +5,7 @@ blogs = [
     {
         "slug": "what-is-ichra-brokers-care",
         "title": "What is an ICHRA and Why Should Health Insurance Brokers Care?",
-        "date": "Oct 12, 2026",
+        "category": "Market Trends",
         "excerpt": "Discover how ICHRAs are transforming the health insurance market and why licensed agents must adapt to stay ahead.",
         "content": """
             <h3>The Shift to Defined Contribution</h3>
@@ -20,7 +20,7 @@ blogs = [
     {
         "slug": "the-3-biggest-lies-in-ichra",
         "title": "The 3 Biggest Lies in the ICHRA Industry",
-        "date": "Oct 15, 2026",
+        "category": "Broker Strategy",
         "excerpt": "Don't buy the lie. Learn how third-party platforms use misinformation to steal your Agent of Record (AOR).",
         "content": """
             <h3>Lie #1: ICHRA is Too Complicated for Brokers</h3>
@@ -36,7 +36,7 @@ blogs = [
     {
         "slug": "transitioning-book-of-business-ichra",
         "title": "How to Transition Your Book of Business from Group Plans to ICHRA",
-        "date": "Oct 18, 2026",
+        "category": "Broker Strategy",
         "excerpt": "A strategic guide for licensed health insurance agents looking to transition employer groups to the ICHRA model.",
         "content": """
             <h3>Identify the Right Candidates</h3>
@@ -52,7 +52,7 @@ blogs = [
     {
         "slug": "ichra-masters-model-keep-100-commissions",
         "title": "The ICHRA Masters Model: Keep 100% of Your Commissions and AOR",
-        "date": "Oct 21, 2026",
+        "category": "Platform Guide",
         "excerpt": "Discover how the ICHRA Masters platform was built by agents, for agents, to protect your revenue.",
         "content": """
             <h3>The Problem with the Current Market</h3>
@@ -71,7 +71,7 @@ blogs = [
     {
         "slug": "why-employers-shifting-defined-contribution",
         "title": "Why Employers are Shifting to the Defined Contribution Health Model",
-        "date": "Oct 25, 2026",
+        "category": "Market Trends",
         "excerpt": "Predictability and choice are driving a massive shift in how businesses offer health benefits.",
         "content": """
             <h3>The Death of the One-Size-Fits-All Plan</h3>
@@ -87,7 +87,7 @@ blogs = [
     {
         "slug": "ichra-vs-traditional-group-insurance",
         "title": "ICHRA vs. Traditional Group Insurance: A Broker's Comparison",
-        "date": "Oct 28, 2026",
+        "category": "Market Trends",
         "excerpt": "A deep dive into the structural differences between ICHRAs and traditional group health plans.",
         "content": """
             <h3>Selection and Choice</h3>
@@ -110,7 +110,7 @@ blogs = [
     {
         "slug": "step-by-step-ichra-quotes-enrollments",
         "title": "Step-by-Step: Managing ICHRA Quotes and Enrollments on One Platform",
-        "date": "Nov 2, 2026",
+        "category": "Platform Guide",
         "excerpt": "See how simple it is to quote, model, and enroll an ICHRA when you have the right software infrastructure.",
         "content": """
             <h3>Step 1: Employer Contribution Strategy</h3>
@@ -132,7 +132,7 @@ blogs = [
     {
         "slug": "protecting-agency-future-third-party-ichra",
         "title": "Protecting Your Agency's Future from Third-Party ICHRA Platforms",
-        "date": "Nov 5, 2026",
+        "category": "Broker Strategy",
         "excerpt": "How to spot predatory platforms that are trying to disintermediate brokers and steal books of business.",
         "content": """
             <h3>The Trojan Horse Strategy</h3>
@@ -154,7 +154,7 @@ blogs = [
     {
         "slug": "financial-benefits-ichra-smbs",
         "title": "The Financial Benefits of ICHRAs for Small and Mid-Sized Businesses",
-        "date": "Nov 8, 2026",
+        "category": "Market Trends",
         "excerpt": "Why SMBs are the fastest-growing adopters of Individual Coverage Health Reimbursement Arrangements.",
         "content": """
             <h3>Breaking the Barrier to Entry</h3>
@@ -170,7 +170,7 @@ blogs = [
     {
         "slug": "ultimate-ichra-toolkit-licensed-agents",
         "title": "The Ultimate ICHRA Toolkit: What Every Licensed Agent Needs to Succeed",
-        "date": "Nov 12, 2026",
+        "category": "Platform Guide",
         "excerpt": "Equip yourself with the right software, knowledge, and strategies to dominate the ICHRA market.",
         "content": """
             <h3>1. An Agent-First Software Platform</h3>
@@ -202,7 +202,7 @@ for blog in blogs:
     <main class="content-wrapper">
         <header class="inner-page-header gs-reveal" style="padding: 8rem 5% 3rem; background: var(--brand-blue); color: #ffffff; text-align: center;">
             <h1 class="modern-title" style="color: #ffffff; font-size: clamp(2rem, 4vw, 3.5rem); max-width: 900px; margin: 0 auto;">{blog["title"]}</h1>
-            <p style="color: var(--accent-gold-light); margin-top: 1rem; font-family: Georgia, serif; font-style: italic;">{blog["date"]} • By ICHRA Masters</p>
+            <p style="color: var(--accent-gold-light); margin-top: 1rem; font-family: Georgia, serif; font-style: italic;">{blog["category"]} • By ICHRA Masters</p>
         </header>
         <section class="lesson-section" style="padding: 4rem 5%;">
             <div class="container" style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; color: var(--text-slate);">
@@ -227,10 +227,10 @@ for blog in blogs:
 blogs_grid = ""
 for blog in blogs:
     blogs_grid += f'''
-            <a href="{blog["slug"]}.html" class="lie-card gs-reveal" style="text-decoration: none; display: flex; flex-direction: column;">
-                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">{blog["date"]}</span>
-                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem;">{blog["title"]}</h3>
-                <p style="margin-bottom: 1.5rem; flex-grow: 1;">{blog["excerpt"]}</p>
+            <a href="{blog["slug"]}.html" class="lie-card gs-reveal blog-card" data-category="{blog["category"].replace(" ", "-").lower()}" style="text-decoration: none; display: flex; flex-direction: column;">
+                <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">{blog["category"]}</span>
+                <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem; color: #0a2440;">{blog["title"]}</h3>
+                <p style="margin-bottom: 1.5rem; flex-grow: 1; color: #475569;">{blog["excerpt"]}</p>
                 <span style="color: var(--brand-blue); font-weight: 600; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem;">Read Article &rarr;</span>
             </a>
     '''
@@ -241,14 +241,52 @@ blogs_index_content = f'''
             <h1 class="modern-title" style="color: #ffffff;">Industry <span class="text-gradient-gold">Insights</span></h1>
             <p style="max-width: 600px; margin: 1.5rem auto 0; color: #cbd5e1; font-size: 1.2rem;">Expert strategies, market analysis, and actionable advice for licensed health insurance agents navigating the ICHRA landscape.</p>
         </header>
-        <section class="lesson-section" style="padding: 5rem 5%; background: var(--bg-light);">
+        <section class="lesson-section" style="padding: 3rem 5% 5rem; background: var(--bg-light);">
             <div class="container" style="max-width: 1200px; margin: 0 auto;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2.5rem;">
+                <div class="filter-nav" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                    <button class="filter-btn active" data-filter="all" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #0a2440; color: #ffffff; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">All</button>
+                    <button class="filter-btn" data-filter="broker-strategy" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #ffffff; color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Broker Strategy</button>
+                    <button class="filter-btn" data-filter="market-trends" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #ffffff; color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Market Trends</button>
+                    <button class="filter-btn" data-filter="platform-guide" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #ffffff; color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Platform Guide</button>
+                </div>
+                
+                <div class="blogs-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2.5rem;">
                     {blogs_grid}
                 </div>
             </div>
         </section>
     </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {{
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+            
+            filterBtns.forEach(btn => {{
+                btn.addEventListener('click', () => {{
+                    // Update active state
+                    filterBtns.forEach(b => {{
+                        b.style.background = '#ffffff';
+                        b.style.color = '#0a2440';
+                        b.classList.remove('active');
+                    }});
+                    btn.style.background = '#0a2440';
+                    btn.style.color = '#ffffff';
+                    btn.classList.add('active');
+                    
+                    // Filter cards
+                    const filter = btn.getAttribute('data-filter');
+                    blogCards.forEach(card => {{
+                        if(filter === 'all' || card.getAttribute('data-category') === filter) {{
+                            card.style.display = 'flex';
+                        }} else {{
+                            card.style.display = 'none';
+                        }}
+                    }});
+                }});
+            }});
+        }});
+    </script>
 '''
 
 page_top_blogs = re.sub(r'<title>.*?</title>', '<title>Insights & Articles | ICHRA Masters</title>', top_part)
