@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICHRA Masters | The Architect</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="modern-body">
+    
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Top Bar Navigation -->
+    <nav class="top-navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="what-is-ichra.html" class="nav-btn">What is ICHRA?</a>
+            <a href="lies.html" class="nav-btn">Three Lies</a>
+            <a href="blogs.html" class="nav-btn">Blogs</a>
+            <a href="contact.html" class="nav-btn">Contact Us</a>
+            <a href="login.html" class="portal-btn">Login</a>
+        </div>
+    </nav>
+
+    <main class="content-wrapper">
+        
+        <!-- Interactive 2-Column Hero Section -->
+        <section class="hero-grid" id="hero">
+            
+            <!-- Left Side: Static Text & Layout Match -->
+            <div class="hero-text gs-reveal">
+                <div class="hero-eyebrow">ICHRA PLATFORM FOR AGENTS</div>
+                
+                <h1 class="modern-title">
+                    Keep your <br>
+                    <span class="text-rotator-container">
+                        <span class="text-rotator-wrapper" id="rolling-words">
+                            <span class="rotator-word">AOR.</span>
+                            <span class="rotator-word">Clients.</span>
+                            <span class="rotator-word">Commissions.</span>
+                            <span class="rotator-word">AOR.</span>
+                        </span>
+                    </span>
+                </h1>
+
+                <p class="modern-subtitle">A seamless ICHRA platform engineered for licensed agents to manage quoting, enrollment, and client relationships while retaining 100% of their commissions and AOR.</p>
+                
+                <div class="hero-actions gs-reveal" style="justify-content: flex-start; margin-top: 2rem;">
+                    <a href="contact.html" class="glass-btn primary" style="background: var(--brand-blue); color: #ffffff; border: none;">Schedule a Demo</a>
+                    <a href="#what-is-ichra" class="glass-btn secondary" style="border-color: var(--brand-blue); color: var(--brand-blue);">What is ICHRA?</a>
+                </div>
+
+                <!-- 2x2 Stats Grid -->
+                <div class="hero-stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">Real-time</div>
+                        <div class="stat-label">Quotes instantly</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Your book of business</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">$0</div>
+                        <div class="stat-label">To get started</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">Quote &rarr; Enroll</div>
+                        <div class="stat-label">One platform</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Video Showcase -->
+            <div class="video-showcase-wrapper gs-reveal">
+                <video class="hero-video" autoplay loop muted playsinline>
+                    <source src="record.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+        </section>
+
+        <!-- New Section: Why Agents Choose Us -->
+        <section class="features-section dark-mode">
+            <div class="container gs-reveal" style="max-width: 1400px;">
+                <div class="container gs-reveal" style="text-align: center;">
+                    <h2 class="section-title" style="color: #ffffff; white-space: nowrap; font-size: clamp(1.2rem, 3.5vw, 3.5rem); margin-bottom: 1rem;">Why Agents Are Choosing <span class="text-gradient-gold">ICHRA Masters</span></h2>
+                </div>
+                
+                <div class="features-grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                    <!-- Card 1 -->
+                    <div class="feature-card gs-reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
+                        <h3>Instant Quotes, Zero Outsourcing</h3>
+                        <p class="section-text" style="font-size: 0.95rem;">Stop losing clients to quote providers. Get real-time ICHRA quotes while sitting with your clients.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="feature-card gs-reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                        </div>
+                        <h3>Enrollments Made Easy</h3>
+                        <p class="section-text" style="font-size: 0.95rem;">With ICHRA Masters, agents can move seamlessly from quote to enrollment without the usual back-and-forth. Our streamlined process keeps you in control, helping you enroll clients faster and with greater accuracy—all in one platform.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="feature-card gs-reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3>Seamless ICHRA Admin</h3>
+                        <p class="section-text" style="font-size: 0.95rem;">ICHRA Masters doesn’t just help you quote—it supplies seamless compliance. Our integrated platform handles the heavy lifting, so agents can offer a smooth, stress-free ICHRA experience without added complexity.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="feature-card gs-reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                        </div>
+                        <h3>Client Management</h3>
+                        <p class="section-text" style="font-size: 0.95rem;">ICHRA Masters gives agents full visibility and control over their book of business, making it easy to manage client accounts, renewals, and changes in one place. Stay organized, strengthen relationships, and deliver ongoing value with tools built to support long-term client success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule A Call CTA -->
+        <section class="lesson-section" style="border-top: 1px solid var(--border-light); padding: 4rem 5%;">
+            <div class="container gs-reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <img src="flower.svg" alt="Accent Logo" class="accent-logo" style="filter: invert(1) opacity(0.2);">
+                <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Ready to scale your <span class="text-gradient-gold">agency?</span></h2>
+                <p class="section-text" style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 3rem;">
+                    Don't let third-party platforms hold your book of business hostage. Talk to an Architect today and discover how our white-labeled platform puts you back in complete control.
+                </p>
+                <div class="cta-actions" style="justify-content: center;">
+                    <a href="contact.html" class="glass-btn primary" style="background: var(--brand-blue); color: #ffffff; border: none; font-size: 1.1rem; padding: 1rem 3rem;">Schedule a Call With Us</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
+                <p class="footer-tagline">Built for Agents, By Agents.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="lies.html">The Lies</a>
+                    <a href="model.html">The Model</a>
+                    <a href="login.html">Agent Portal</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Strategy Call</a>
+                    <a href="blogs.html">Insights</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ICHRA Masters. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

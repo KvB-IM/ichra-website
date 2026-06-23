@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broker Guide | ICHRA Masters</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .inner-page-header {
+            padding: 8rem 5% 3rem;
+            background: var(--brand-blue);
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        .blog-section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .blog-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        }
+
+        .blog-image {
+            height: 220px;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-image::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle, rgba(198, 161, 91, 0.1) 0%, transparent 70%);
+        }
+
+        .blog-image span {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            color: var(--brand-blue);
+            opacity: 0.3;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .blog-content {
+            padding: 2.5rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .blog-content p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: var(--accent-gold-dark);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--brand-blue);
+        }
+    </style>
+</head>
+<body class="modern-body">
+
+    <!-- Top Navigation -->
+    <nav class="top-navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="what-is-ichra.html" class="nav-btn">What is ICHRA?</a>
+            <a href="lies.html" class="nav-btn">Three Lies</a>
+            <a href="blogs.html" class="nav-btn">Blogs</a>
+            <a href="contact.html" class="nav-btn">Contact Us</a>
+            <a href="login.html" class="portal-btn">Login</a>
+        </div>
+    </nav>
+
+    <header class="inner-page-header gs-reveal">
+        <div class="accent-mark" style="margin: 0 auto 1.5rem; text-align: center;">✦</div>
+        <h1 class="modern-title" style="color: #ffffff;">Field Guide & <span class="text-gradient-gold">Intelligence.</span></h1>
+        <p class="section-text" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">
+            Resources, pitches, and compliance guides to help you own the ICHRA conversation.
+        </p>
+    </header>
+
+    <section class="blog-section">
+        <div class="blog-grid">
+            <div class="blog-card gs-reveal">
+                <div class="blog-image"><span>Guide</span></div>
+                <div class="blog-content">
+                    <h3>Don't Buy the Lie</h3>
+                    <p>The Broker's Field Guide to Owning ICHRA (Without Giving Up Your Agent of Record).</p>
+                    <a href="#" class="read-more">Read the Guide &rarr;</a>
+                </div>
+            </div>
+
+            <div class="blog-card gs-reveal">
+                <div class="blog-image"><span>Script</span></div>
+                <div class="blog-content">
+                    <h3>The 3-Sentence Pitch</h3>
+                    <p>Most brokers over-explain ICHRA. Here is the 3-sentence version that actually works to close employers.</p>
+                    <a href="#" class="read-more">Get the Script &rarr;</a>
+                </div>
+            </div>
+
+            <div class="blog-card gs-reveal">
+                <div class="blog-image"><span>Compliance</span></div>
+                <div class="blog-content">
+                    <h3>What Triggers ACA Penalties</h3>
+                    <p>The compliance question every CFO asks. Learn the three things that determine compliance for ALEs.</p>
+                    <a href="#" class="read-more">Learn Compliance &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo">
+                <p class="footer-tagline">Empowering licensed agents to control their book of business.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="login.html">Agent Login</a>
+                    <a href="model.html">The Model</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="lies.html">The Three Lies</a>
+                    <a href="contact.html">Strategy Call</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:service@ichramasters.com">service@ichramasters.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ICHRA Masters. All rights reserved. Platform built for licensed agents.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 85%",
+                },
+                y: 30,
+                autoAlpha: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.top-navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

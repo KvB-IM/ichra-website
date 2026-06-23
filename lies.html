@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Three Lies | ICHRA Masters</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .inner-page-header {
+            padding: 8rem 5% 3rem;
+            background: var(--brand-blue);
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .lies-section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .lie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .lie-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 3rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .lie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            border-color: var(--accent-gold-dark);
+        }
+        
+        .lie-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-gold-dark);
+        }
+        
+        .gold-num {
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: var(--accent-gold-dark);
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .lie-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+        
+        .lie-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<body class="modern-body">
+
+    <!-- Top Navigation -->
+    <nav class="top-navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="what-is-ichra.html" class="nav-btn">What is ICHRA?</a>
+            <a href="lies.html" class="nav-btn">Three Lies</a>
+            <a href="blogs.html" class="nav-btn">Blogs</a>
+            <a href="contact.html" class="nav-btn">Contact Us</a>
+            <a href="login.html" class="portal-btn">Login</a>
+        </div>
+    </nav>
+
+    <header class="inner-page-header gs-reveal">
+        <div class="accent-mark" style="margin: 0 auto 1.5rem; text-align: center;">✦</div>
+        <h1 class="modern-title" style="color: #ffffff;">The Industry Is Lying To You.</h1>
+        <p class="section-text" style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">
+            Certain platforms want to keep you dependent, slowly taking over your book of business. Here are the three massive lies they tell you about ICHRA to maintain their leverage.
+        </p>
+    </header>
+
+    <section class="lies-section">
+        <div class="lie-grid">
+            <div class="lie-card gs-reveal">
+                <span class="gold-num">01</span>
+                <h3>"ICHRA is too complicated to do yourself."</h3>
+                <p>They tell you it’s impossibly complex so you’ll hand over the reins. The truth? With the right underlying platform, modeling and enrolling an ICHRA is a highly streamlined, repeatable process that you can own entirely.</p>
+            </div>
+            <div class="lie-card gs-reveal">
+                <span class="gold-num">02</span>
+                <h3>"You need a TPA to handle quoting."</h3>
+                <p>This is how they get between you and your client. If they control the quote, they control the relationship. A true agent platform gives you the live quoting engine directly, cutting out the middleman entirely.</p>
+            </div>
+            <div class="lie-card gs-reveal">
+                <span class="gold-num">03</span>
+                <h3>"A Broker of Record letter is required."</h3>
+                <p>This is the ultimate trap. When you sign over the BOR, you surrender your commissions and your client list. You should never have to sacrifice your AOR just to provide an ICHRA solution to a client.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo">
+                <p class="footer-tagline">Empowering licensed agents to control their book of business.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="login.html">Agent Login</a>
+                    <a href="model.html">The Model</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="lies.html">The Three Lies</a>
+                    <a href="contact.html">Strategy Call</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:service@ichramasters.com">service@ichramasters.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ICHRA Masters. All rights reserved. Platform built for licensed agents.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 85%",
+                },
+                y: 30,
+                autoAlpha: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.top-navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Model | ICHRA Masters</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .inner-page-header {
+            padding: 8rem 5% 3rem;
+            background: var(--brand-blue);
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .steps-section {
+            padding: 6rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .step-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 3rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+            border-color: var(--accent-gold-dark);
+        }
+        
+        .step-number {
+            font-family: Georgia, serif;
+            font-size: 5rem;
+            color: var(--accent-gold-dark);
+            line-height: 1;
+            opacity: 0.8;
+            min-width: 80px;
+        }
+        
+        .step-content h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+        
+        .step-content p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body class="modern-body">
+
+    <!-- Top Navigation -->
+    <nav class="top-navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="what-is-ichra.html" class="nav-btn">What is ICHRA?</a>
+            <a href="lies.html" class="nav-btn">Three Lies</a>
+            <a href="blogs.html" class="nav-btn">Blogs</a>
+            <a href="contact.html" class="nav-btn">Contact Us</a>
+            <a href="login.html" class="portal-btn">Login</a>
+        </div>
+    </nav>
+
+    <header class="inner-page-header gs-reveal">
+        <div class="accent-mark" style="margin: 0 auto 1.5rem; text-align: center;">✦</div>
+        <h1 class="modern-title" style="color: #ffffff;">ICHRA Isn't Complicated. <br/><span class="text-gradient-gold">It's Structured.</span></h1>
+        <p class="section-text" style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">
+            When broken into the right steps, and supported by the right infrastructure, it becomes not only manageable but incredibly efficient for you and your clients.
+        </p>
+    </header>
+
+    <section class="steps-section">
+        <div class="step-card gs-reveal">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>Employer Contribution Strategy</h3>
+                <p>The employer decides exactly what they want to spend. Not with what a carrier dictates, but what fits their business bottom line perfectly.</p>
+            </div>
+        </div>
+        
+        <div class="step-card gs-reveal">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>Class Structure Design</h3>
+                <p>Employees are grouped into customizable classes (full-time, part-time, geographic, etc.). This allows complete flexibility in how contributions are intelligently distributed.</p>
+            </div>
+        </div>
+
+        <div class="step-card gs-reveal">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>Live Quoting & Plan Modeling</h3>
+                <p>Plans are modeled instantly based on those contributions. This is where control matters most—because whoever runs the quote shapes the final outcome and protects the relationship.</p>
+            </div>
+        </div>
+
+        <div class="step-card gs-reveal">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h3>Seamless Enrollment & Administration</h3>
+                <p>Employees select the exact plans that fit their individual needs via a seamless platform. The broker stays involved for high-level support, renewals, and adjustments without dealing with administrative nightmares.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo">
+                <p class="footer-tagline">Empowering licensed agents to control their book of business.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="login.html">Agent Login</a>
+                    <a href="model.html">The Model</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="lies.html">The Three Lies</a>
+                    <a href="contact.html">Strategy Call</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:service@ichramasters.com">service@ichramasters.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ICHRA Masters. All rights reserved. Platform built for licensed agents.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 85%",
+                },
+                y: 30,
+                autoAlpha: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.top-navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
