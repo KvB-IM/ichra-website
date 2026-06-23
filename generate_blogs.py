@@ -227,7 +227,7 @@ for blog in blogs:
 blogs_grid = ""
 for blog in blogs:
     blogs_grid += f'''
-            <a href="{blog["slug"]}.html" class="lie-card gs-reveal blog-card" data-category="{blog["category"].replace(" ", "-").lower()}" style="text-decoration: none; display: flex; flex-direction: column;">
+            <a href="{blog["slug"]}.html" class="lie-card gs-reveal blog-card" data-category="{blog["category"].replace(" ", "-").lower()}" style="text-decoration: none; display: flex; flex-direction: column; background: #ffffff;">
                 <span style="color: var(--accent-gold-dark); font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">{blog["category"]}</span>
                 <h3 style="font-size: 1.4rem; line-height: 1.3; margin-bottom: 1rem; color: #0a2440;">{blog["title"]}</h3>
                 <p style="margin-bottom: 1.5rem; flex-grow: 1; color: #475569;">{blog["excerpt"]}</p>
@@ -242,7 +242,7 @@ blogs_index_content = f'''
             <p style="max-width: 600px; margin: 1.5rem auto 0; color: #cbd5e1; font-size: 1.2rem;">Expert strategies, market analysis, and actionable advice for licensed health insurance agents navigating the ICHRA landscape.</p>
         </header>
         <section class="lesson-section" style="padding: 3rem 5% 5rem; background: var(--bg-light);">
-            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="container" style="max-width: 1500px; margin: 0 auto;">
                 <div class="filter-nav" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
                     <button class="filter-btn active" data-filter="all" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #0a2440; color: #ffffff; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">All</button>
                     <button class="filter-btn" data-filter="broker-strategy" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #ffffff; color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Broker Strategy</button>
@@ -250,7 +250,7 @@ blogs_index_content = f'''
                     <button class="filter-btn" data-filter="platform-guide" style="padding: 0.5rem 1.5rem; border-radius: 30px; border: 1px solid var(--border-light); background: #ffffff; color: #0a2440; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Platform Guide</button>
                 </div>
                 
-                <div class="blogs-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2.5rem;">
+                <div class="blogs-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem;">
                     {blogs_grid}
                 </div>
             </div>
