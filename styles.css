@@ -305,7 +305,7 @@ h1, h2, h3, .serif {
         justify-content: center !important;
     }
     .features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
     .grid-2-col {
         grid-template-columns: 1fr;
@@ -343,6 +343,7 @@ h1, h2, h3, .serif {
     .section-title {
         font-size: clamp(1.8rem, 4vw, 3rem);
         word-wrap: break-word;
+        white-space: normal !important;
     }
 }
 
@@ -371,8 +372,9 @@ h1, h2, h3, .serif {
         gap: 1.5rem;
     }
     .section-title {
-        font-size: clamp(1.5rem, 5vw, 2.2rem);
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
         padding: 0 4%;
+        white-space: normal !important;
     }
     .features-section {
         padding: 4rem 0;
