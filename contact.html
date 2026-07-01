@@ -13,81 +13,82 @@
     
     <style>
         .inner-page-header {
-            padding: 8rem 5% 8rem;
+            padding: 8rem 5% 4rem;
             background: var(--brand-blue);
             color: #ffffff;
             text-align: center;
         }
         
-        .contact-container {
-            max-width: 600px;
-            margin: -4rem auto 6rem auto;
-            background: #ffffff;
-            padding: 4rem;
-            border-radius: 12px;
+        .meeting-container {
+            max-width: 1000px;
+            margin: -2rem auto 4rem auto;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 2rem;
+            border-radius: 16px;
             box-shadow: 0 25px 50px -12px rgba(18, 64, 110, 0.2);
             position: relative;
             z-index: 10;
-            border: 1px solid var(--border-light);
-            border-top: 6px solid var(--accent-gold-dark);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-top: 4px solid var(--accent-gold-dark);
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--text-main);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .form-group input, .form-group textarea {
+        .meeting-container iframe {
             width: 100%;
-            padding: 1rem;
-            border: 1px solid var(--border-light);
-            border-radius: 8px;
-            font-family: 'Inter', sans-serif;
-            background: #f8fafc;
-            color: var(--text-main);
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-gold-dark);
-            box-shadow: 0 0 0 3px rgba(198, 161, 91, 0.1);
-        }
-
-        .form-group textarea {
-            height: 140px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 1.2rem;
-            background: var(--brand-blue);
-            color: #ffffff;
+            min-height: 700px;
             border: none;
             border-radius: 8px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            font-family: 'Inter', sans-serif;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
         }
 
-        .submit-btn:hover {
-            background: #0f355c;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(18, 64, 110, 0.2);
+        .contact-info-strip {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .contact-info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info-item .icon-circle {
+            width: 48px;
+            height: 48px;
+            background: rgba(198, 161, 91, 0.1);
+            color: var(--accent-gold-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-info-item h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+        }
+
+        .contact-info-item p,
+        .contact-info-item a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info-item a:hover {
+            color: var(--brand-blue);
         }
     </style>
 
@@ -138,36 +139,32 @@
 
     <header class="inner-page-header gs-reveal">
         <div class="accent-mark" style="margin: 0 auto 1.5rem; text-align: center;">✦</div>
-        <h1 class="modern-title" style="color: #ffffff;">Talk to an <span class="text-gradient-gold">Architect.</span></h1>
+        <h1 class="modern-title" style="color: #ffffff;">Schedule a <span class="text-gradient-gold">Strategy Call.</span></h1>
         <p class="section-text" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">
-            See how ICHRA works when the broker stays in control. Let's discuss your book of business.
-        </p>
-        <p style="margin-top: 1rem; color: var(--accent-gold); font-weight: 500; font-size: 1.1rem;">
-            Or email us directly at <a href="mailto:service@ichramasters.com" style="color: #ffffff; text-decoration: underline;">service@ichramasters.com</a>
+            See how ICHRA works when the broker stays in control. Pick a time that works for you and let's discuss your book of business.
         </p>
     </header>
 
-    <section class="contact-section">
-        <div class="contact-container gs-reveal">
-            <form>
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" placeholder="John Doe" required>
-                </div>
-                <div class="form-group">
-                    <label>Agency / Brokerage Name</label>
-                    <input type="text" placeholder="Your Agency" required>
-                </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" placeholder="john@agency.com" required>
-                </div>
-                <div class="form-group">
-                    <label>What's your biggest AOR concern?</label>
-                    <textarea placeholder="Tell us about your experience evaluating ICHRA..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Request Strategy Call</button>
-            </form>
+    <!-- HubSpot Meeting Embed -->
+    <section style="padding: 0 5%;">
+        <div class="meeting-container gs-reveal">
+            <iframe src="https://meet.ichramasters.com/meetings/mario-roker" title="Schedule a Strategy Call with ICHRA Masters"></iframe>
+        </div>
+    </section>
+
+    <!-- Contact Info Strip -->
+    <section style="padding: 3rem 5%;">
+        <div class="contact-info-strip gs-reveal">
+            <div class="contact-info-item">
+                <div class="icon-circle">✉</div>
+                <h4>Email Us</h4>
+                <a href="mailto:service@ichramasters.com">service@ichramasters.com</a>
+            </div>
+            <div class="contact-info-item">
+                <div class="icon-circle">🗓</div>
+                <h4>Book a Meeting</h4>
+                <p>Select a time above</p>
+            </div>
         </div>
     </section>
 
