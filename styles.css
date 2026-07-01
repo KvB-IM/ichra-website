@@ -204,25 +204,77 @@ h1, h2, h3, .serif {
     max-width: 700px;
 }
 
+/* ===== HAMBURGER MENU BUTTON (hidden on desktop) ===== */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+.hamburger-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+/* Animate to X when open */
+.hamburger-btn.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-btn.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ===== RESPONSIVE: TABLET (max-width: 900px) ===== */
 @media (max-width: 900px) {
+    .hamburger-btn {
+        display: block;
+    }
     .top-navbar {
-        flex-direction: column;
+        flex-direction: row;
         padding: 1rem 5%;
     }
     .top-navbar.scrolled {
         padding: 0.8rem 5%;
     }
-    .nav-brand {
-        margin-bottom: 0.8rem;
-    }
     .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 36, 64, 0.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         justify-content: center;
-        gap: 0.8rem;
+        align-items: center;
+        gap: 2rem;
+        z-index: 999;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .nav-links .nav-btn {
+        font-size: 1.2rem;
+        letter-spacing: 0.1em;
+    }
+    .nav-links .portal-btn {
+        font-size: 1rem;
+        padding: 0.8rem 2rem !important;
     }
     .hero-grid {
         flex-direction: column;
-        padding: 10rem 5% 4rem;
+        padding: 7rem 5% 4rem;
         text-align: center;
     }
     .hero-text {
@@ -287,6 +339,11 @@ h1, h2, h3, .serif {
         margin-right: -5%;
         border-radius: 0;
     }
+    /* Section titles that overflow */
+    .section-title {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        word-wrap: break-word;
+    }
 }
 
 /* ===== RESPONSIVE: MOBILE (max-width: 600px) ===== */
@@ -297,25 +354,14 @@ h1, h2, h3, .serif {
     .nav-brand img {
         height: 28px;
     }
-    .nav-links {
-        gap: 0.4rem 0.8rem;
-    }
-    .nav-btn {
-        font-size: 0.7rem;
-        padding: 0.3rem 0;
-    }
-    .portal-btn {
-        padding: 0.35rem 0.8rem !important;
-        font-size: 0.75rem;
-    }
     .content-wrapper {
-        padding-top: 100px;
+        padding-top: 70px;
     }
     .hero-grid {
-        padding: 7rem 4% 3rem;
+        padding: 5rem 4% 3rem;
     }
     .modern-title {
-        font-size: clamp(1.8rem, 6vw, 2.8rem);
+        font-size: clamp(1.8rem, 7vw, 2.8rem);
     }
     .modern-subtitle {
         font-size: 1rem;
@@ -325,10 +371,14 @@ h1, h2, h3, .serif {
         gap: 1.5rem;
     }
     .section-title {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
+        padding: 0 4%;
     }
     .features-section {
         padding: 4rem 0;
+    }
+    .features-section.dark-mode {
+        padding: 3rem 4% !important;
     }
     .feature-card {
         padding: 1.5rem;
@@ -342,6 +392,10 @@ h1, h2, h3, .serif {
     .glass-btn {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
+    }
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
     }
     /* Footer mobile */
     .modern-footer {
@@ -357,19 +411,19 @@ h1, h2, h3, .serif {
     }
     /* Inner page headers */
     .inner-page-header {
-        padding: 7rem 4% 2.5rem !important;
+        padding: 6rem 4% 2rem !important;
     }
     .inner-page-header .modern-title {
-        font-size: clamp(1.6rem, 6vw, 2.5rem) !important;
+        font-size: clamp(1.5rem, 7vw, 2.5rem) !important;
     }
     /* Meeting embed mobile */
     .meeting-container {
         padding: 0.5rem;
-        margin: -1rem -2% 2rem;
+        margin: -1rem 0 2rem;
         border-radius: 12px;
     }
     .meeting-container iframe {
-        min-height: 650px;
+        min-height: 600px;
     }
     .contact-info-strip {
         flex-direction: column;
@@ -386,8 +440,14 @@ h1, h2, h3, .serif {
     }
     .hero-eyebrow {
         justify-content: center;
+        font-size: 0.7rem;
+    }
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+        width: 20px;
     }
 }
+
 
 .accent-mark {
     font-size: 2rem;
