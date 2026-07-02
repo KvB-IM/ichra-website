@@ -1,0 +1,13 @@
+# ICHRA Masters - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ichramasters.com/sitemap.xml
+
+# Block utility/non-content files
+Disallow: /serve.py
+Disallow: /generate_blogs.py
+Disallow: /inject_jsonld.py
+Disallow: /login.html
+Disallow: /ICHRA Masters - Export.html
