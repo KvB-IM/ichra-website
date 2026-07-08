@@ -89,6 +89,22 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://ichramasters.com/ichra-affordability-safe-harbors-explained</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ichramasters.com/ichra-hsa-eligibility-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ichramasters.com/ichra-employee-classes-design-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Legal -->
   <url>
     <loc>https://ichramasters.com/privacy</loc>
