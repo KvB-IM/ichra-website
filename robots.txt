@@ -9,5 +9,6 @@ Sitemap: https://ichramasters.com/sitemap.xml
 Disallow: /serve.py
 Disallow: /generate_blogs.py
 Disallow: /inject_jsonld.py
-Disallow: /login.html
-Disallow: /ICHRA Masters - Export.html
+Disallow: /seo_inject.py
+Disallow: /login
+Disallow: /ICHRA%20Masters%20-%20Export
