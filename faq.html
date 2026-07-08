@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequently Asked Questions About ICHRA | ICHRA Masters</title>
-    <meta name="description" content="Get answers to the most common questions about ICHRA, how it works for brokers, quoting, enrollment, commissions, and why ICHRA Masters is different from other platforms.">
-    <meta name="keywords" content="ICHRA FAQ, ICHRA questions, what is ICHRA, ICHRA for brokers, ICHRA enrollment, ICHRA quoting, ICHRA commissions, ICHRA AOR">
+    <title>ICHRA Knowledge Base & FAQ | ICHRA Masters</title>
+    <meta name="description" content="The most comprehensive ICHRA FAQ and knowledge base for brokers, agents, and employers. Learn about ICHRA compliance, classes, quoting, enrollment, affordability, HSA compatibility, AOR protection, and how ICHRA Masters works.">
+    <meta name="keywords" content="ICHRA FAQ, ICHRA knowledge base, what is ICHRA, ICHRA compliance, ICHRA classes, ICHRA quoting, ICHRA enrollment, ICHRA for brokers, ICHRA AOR, ICHRA affordability, ICHRA vs group insurance, ICHRA HSA, ICHRA COBRA, ICHRA S-Corp, ICHRA TPA, ICHRA Masters">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,13 +20,44 @@
             color: #ffffff;
             text-align: center;
         }
-
         .faq-section {
             padding: 4rem 5%;
             max-width: 900px;
             margin: 0 auto;
         }
-
+        .faq-intro {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .faq-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .faq-nav a {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: rgba(18, 64, 110, 0.06);
+            color: var(--brand-blue);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .faq-nav a:hover {
+            background: var(--brand-blue);
+            color: #ffffff;
+        }
         .faq-category-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.6rem;
@@ -35,34 +66,28 @@
             padding-bottom: 0.75rem;
             border-bottom: 2px solid var(--accent-gold-dark);
         }
-
-        .faq-category-title:first-of-type {
-            margin-top: 0;
-        }
-
+        .faq-category-title:first-of-type { margin-top: 0; }
         .faq-item {
             border: 1px solid var(--border-light);
             border-radius: 12px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             overflow: hidden;
             transition: box-shadow 0.3s ease, border-color 0.3s ease;
             background: #ffffff;
         }
-
         .faq-item:hover {
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
             border-color: var(--accent-gold-dark);
         }
-
         .faq-question {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.25rem 1.5rem;
+            padding: 1.15rem 1.5rem;
             cursor: pointer;
             font-family: 'Inter', sans-serif;
             font-weight: 600;
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: var(--text-main);
             background: none;
             border: none;
@@ -71,11 +96,7 @@
             gap: 1rem;
             line-height: 1.5;
         }
-
-        .faq-question:hover {
-            color: var(--brand-blue);
-        }
-
+        .faq-question:hover { color: var(--brand-blue); }
         .faq-chevron {
             flex-shrink: 0;
             width: 20px;
@@ -83,131 +104,97 @@
             transition: transform 0.3s ease;
             color: var(--accent-gold-dark);
         }
-
-        .faq-item.open .faq-chevron {
-            transform: rotate(180deg);
-        }
-
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.3s ease;
+            transition: max-height 0.4s ease;
         }
-
-        .faq-item.open .faq-answer {
-            max-height: 500px;
-        }
-
+        .faq-item.open .faq-answer { max-height: 1200px; }
         .faq-answer-inner {
             padding: 0 1.5rem 1.5rem;
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.8;
         }
-
-        .faq-answer-inner strong {
-            color: var(--text-main);
+        .faq-answer-inner strong { color: var(--text-main); }
+        .faq-answer-inner a {
+            color: var(--brand-blue);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .faq-answer-inner a:hover { color: var(--accent-gold-dark); }
+        .faq-answer-inner ul, .faq-answer-inner ol {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+        .faq-answer-inner ul li, .faq-answer-inner ol li {
+            margin-bottom: 0.4rem;
+        }
+        .source-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: rgba(18, 64, 110, 0.08);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--brand-blue);
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        .source-badge a { font-size: 0.75rem; }
+        .faq-count {
+            display: inline-block;
+            background: var(--accent-gold-dark);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.15rem 0.5rem;
+            border-radius: 10px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        @media (max-width: 600px) {
+            .inner-page-header { padding: 7rem 5% 2rem; }
+            .inner-page-header .modern-title { font-size: 1.8rem; }
+            .faq-question { font-size: 0.9rem; padding: 1rem 1.2rem; }
+            .faq-answer-inner { padding: 0 1.2rem 1.2rem; font-size: 0.9rem; }
+            .faq-nav a { font-size: 0.75rem; padding: 0.4rem 0.8rem; }
+            .faq-category-title { font-size: 1.3rem; }
+            .faq-section { padding: 2.5rem 4%; }
         }
     </style>
 
-    <!-- FAQPage JSON-LD -->
+    <!-- FAQPage JSON-LD — Full Knowledge Base (40+ Questions) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is ICHRA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ICHRA (Individual Coverage Health Reimbursement Arrangement) is a health benefit model where employers provide a fixed, tax-free monthly allowance for employees to purchase their own individual health insurance plans on the open market. Unlike traditional group health insurance, ICHRA gives employees the freedom to choose plans that fit their unique needs while giving employers predictable, controlled costs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is ICHRA different from traditional group health insurance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Traditional group insurance uses a defined benefit model — the employer selects one plan for all employees. ICHRA uses a defined contribution model — the employer sets a monthly allowance and each employee chooses their own individual plan. ICHRA offers more flexibility, personalization, and cost predictability for both employers and employees."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is ICHRA Masters?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ICHRA Masters is a platform built specifically for licensed health insurance agents to quote, model, and enroll ICHRAs in real-time. Unlike other ICHRA platforms that require brokers to sign over their Agent of Record (AOR), ICHRA Masters lets agents keep 100% of their commissions and maintain full control of their book of business."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need to sign over my AOR to use ICHRA Masters?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely not. ICHRA Masters was built on the principle that agents should never have to surrender their Agent of Record (AOR) to access ICHRA technology. You retain 100% ownership of your book of business, your commissions, and your client relationships."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does ICHRA Masters cost to get started?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It's free to get started with ICHRA Masters. There is no upfront cost to begin quoting and enrolling ICHRAs. Schedule a strategy call to learn about the complete pricing model and how ICHRA Masters fits into your agency."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I quote ICHRA in real-time with my clients?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. ICHRA Masters provides a live quoting engine that lets you generate real-time ICHRA quotes while sitting with your clients. There is no need to send quotes to a third party and wait for them to come back. You control the entire quoting process."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What size employers can use ICHRA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ICHRA has no minimum or maximum employer size requirement. Any employer, from a 1-person company to a Fortune 500 corporation, can offer an ICHRA. It is especially popular with small and mid-sized businesses (SMBs) that want cost-predictable health benefits."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is ICHRA compliant with ACA requirements?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. ICHRA was officially established by a federal rule in June 2019 and is fully compliant with the Affordable Care Act (ACA). Employers who offer an ICHRA that meets affordability requirements satisfy the ACA employer mandate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I transition my group plan clients to ICHRA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The transition process involves modeling the employer's current costs, designing employee classes, setting contribution amounts, and guiding employees through individual plan selection. ICHRA Masters provides the software infrastructure to handle every step of this process while you maintain the client relationship."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where is ICHRA Masters based?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ICHRA Masters is based in North Augusta, Georgia, and serves licensed health insurance agents nationwide across the United States."
-          }
-        }
+        {"@type":"Question","name":"What is ICHRA?","acceptedAnswer":{"@type":"Answer","text":"ICHRA (Individual Coverage Health Reimbursement Arrangement) is a health benefit model established by a joint federal rule from the IRS, DOL, and HHS effective January 1, 2020. Employers provide a fixed, tax-free monthly allowance for employees to purchase their own individual health insurance on the ACA Marketplace. Unlike traditional group plans, ICHRA uses a defined contribution model — the '401(k) for healthcare' — giving employees choice and employers cost predictability."}},
+        {"@type":"Question","name":"How is ICHRA different from traditional group health insurance?","acceptedAnswer":{"@type":"Answer","text":"Traditional group insurance uses a defined benefit model where the employer selects one plan. ICHRA uses a defined contribution model where the employer sets a monthly allowance and each employee chooses their own individual plan. With ICHRA there are no renewal negotiations, no carrier rate increases, no participation minimums, and employees get personalized coverage. The employer stops managing unpredictable claims and starts managing a fixed budget."}},
+        {"@type":"Question","name":"Is ICHRA compliant with the ACA?","acceptedAnswer":{"@type":"Answer","text":"Yes. ICHRA was officially authorized by a joint federal rule published in the Federal Register on June 20, 2019 (84 FR 28888). Employers who offer an ICHRA that meets affordability requirements satisfy the ACA employer mandate under Section 4980H. The affordability test is based on whether the employer's ICHRA contribution makes the lowest-cost Silver plan in the employee's rating area affordable (less than 9.96% of income for 2026)."}},
+        {"@type":"Question","name":"What are ICHRA employee classes?","acceptedAnswer":{"@type":"Answer","text":"The IRS defines 11 permitted employee classes under 26 CFR § 54.9802-4: full-time, part-time, salaried, hourly, seasonal, geographic location, collective bargaining, waiting period, non-resident aliens, temporary/staffing, and any combination. Employers can set different contribution amounts for different classes, creating budget flexibility while remaining 100% compliant."}},
+        {"@type":"Question","name":"What is the ICHRA affordability test?","acceptedAnswer":{"@type":"Answer","text":"For Applicable Large Employers (50+ FTEs), the ICHRA must pass an affordability test. The formula is: (LCSP Premium − ICHRA Allowance) must be less than (Monthly Income × 9.96% for 2026). Three IRS safe harbors exist: W-2 method, Rate of Pay method, and Federal Poverty Level method. ICHRA Masters runs automated affordability checks against the Lowest Cost Silver Plan in each employee's rating area."}},
+        {"@type":"Question","name":"Can an employer offer both ICHRA and a group plan?","acceptedAnswer":{"@type":"Answer","text":"Yes, but not to the same class of employees. An employer can offer a traditional group plan to one class (e.g., salaried) and ICHRA to another (e.g., hourly). Minimum class sizes apply: 10 employees for companies under 100; 10% for 100–200 employees; 20 for 200+ employees. These minimums do NOT apply if the employer only offers ICHRA with no group plan."}},
+        {"@type":"Question","name":"What is ICHRA Masters?","acceptedAnswer":{"@type":"Answer","text":"ICHRA Masters is the only ICHRA platform built by agents, for agents. It provides real-time quoting, plan modeling, automated affordability checks, seamless enrollment, and full client management. Based in North Augusta, Georgia, ICHRA Masters serves agents nationwide. The critical difference: you never sign over your Agent of Record (AOR)."}},
+        {"@type":"Question","name":"Do I need to sign over my AOR to use ICHRA Masters?","acceptedAnswer":{"@type":"Answer","text":"No. ICHRA Masters never requires agents to surrender their Agent of Record. You retain 100% ownership of your book of business, commissions, and client relationships. Many third-party ICHRA platforms require AOR assignment — ICHRA Masters was built specifically to prevent this."}},
+        {"@type":"Question","name":"Is ICHRA compatible with Health Savings Accounts (HSAs)?","acceptedAnswer":{"@type":"Answer","text":"Yes, but the ICHRA must be structured correctly. To preserve HSA eligibility, the ICHRA must be configured as 'Premium-Only' (reimburses only insurance premiums) or 'Post-Deductible' (only reimburses after the HDHP deductible is met). If the ICHRA pays first-dollar medical expenses, it is considered 'disqualifying coverage' and the employee loses HSA eligibility. Source: IRS Revenue Ruling 2004-45."}},
+        {"@type":"Question","name":"Can S-Corp owners participate in ICHRA?","acceptedAnswer":{"@type":"Answer","text":"S-Corp owners holding more than 2% cannot receive tax-free ICHRA reimbursements. Their reimbursements must be added to W-2 Box 1 as taxable income, though they are generally exempt from FICA taxes. The owner then takes the Self-Employed Health Insurance Deduction on their 1040, making it effectively pre-tax for income tax purposes. C-Corp owners are treated as W-2 employees and can participate tax-free. Source: IRS Notice 2008-1."}},
+        {"@type":"Question","name":"What happens to premium tax credits when an employer offers ICHRA?","acceptedAnswer":{"@type":"Answer","text":"If an employer offers an affordable ICHRA, the employee is not eligible for premium tax credits (PTC) on the Marketplace. However, if the ICHRA is deemed unaffordable for a particular employee, they can opt out and remain eligible for PTCs. This is the 'Family Glitch' — if the ICHRA is affordable for the employee's self-only coverage, the entire family is disqualified from subsidies, even if family coverage costs $2,000/month. Source: HealthCare.gov."}},
+        {"@type":"Question","name":"What is a TPA and why is it mandatory for ICHRA?","acceptedAnswer":{"@type":"Answer","text":"A Third-Party Administrator (TPA) is a legal and operational mandate for ICHRA. TPAs perform four non-negotiable functions: (1) HIPAA Firewall — shields employers from protected health information, (2) Substantiation — verifies insurance is active before releasing funds, (3) Aggregation — receives one employer payment and distributes to individual carriers, and (4) Reporting — generates IRS Form 1095-C and compliance documentation automatically."}},
+        {"@type":"Question","name":"How does COBRA work with ICHRA?","acceptedAnswer":{"@type":"Answer","text":"When an employee is terminated, they keep their individual insurance policy (portability), but the HRA allowance is subject to COBRA. Employers with 20+ employees must offer COBRA on the HRA account within 14 days. The cost is typically the monthly allowance plus a 2% administrative fee. Most employees decline since they keep the insurance policy regardless. Small employers (under 20) may be subject to state Mini-COBRA laws."}},
+        {"@type":"Question","name":"What are the ACA Employer Mandate penalties ICHRA avoids?","acceptedAnswer":{"@type":"Answer","text":"ALEs face two penalties: Penalty A (Section 4980H(a)) — approximately $2,970 per employee per year if the employer fails to offer Minimum Essential Coverage to 95% of full-time employees. Penalty B (Section 4980H(b)) — approximately $4,460 per subsidized employee if coverage is unaffordable. Simply offering an ICHRA to 95% of employees satisfies Penalty A. Ensuring affordability through proper contribution levels avoids Penalty B."}}
       ]
     }
     </script>
 
-    <!-- BreadcrumbList -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ichramasters.com/" },
-        { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://ichramasters.com/faq" }
+        { "@type": "ListItem", "position": 2, "name": "FAQ & Knowledge Base", "item": "https://ichramasters.com/faq" }
       ]
     }
     </script>
@@ -215,17 +202,16 @@
     <link rel="canonical" href="https://ichramasters.com/faq">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ichramasters.com/faq">
-    <meta property="og:title" content="Frequently Asked Questions About ICHRA | ICHRA Masters">
-    <meta property="og:description" content="Get answers to the most common questions about ICHRA, how it works for brokers, quoting, enrollment, commissions, and why ICHRA Masters is different.">
+    <meta property="og:title" content="ICHRA Knowledge Base & FAQ | ICHRA Masters">
+    <meta property="og:description" content="The most comprehensive ICHRA FAQ for brokers and agents. Compliance, classes, affordability, HSAs, quoting, enrollment, AOR protection — everything you need to know.">
     <meta property="og:site_name" content="ICHRA Masters">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Frequently Asked Questions About ICHRA | ICHRA Masters">
-    <meta name="twitter:description" content="Get answers to the most common questions about ICHRA, how it works for brokers, quoting, enrollment, commissions, and why ICHRA Masters is different.">
+    <meta name="twitter:title" content="ICHRA Knowledge Base & FAQ | ICHRA Masters">
+    <meta name="twitter:description" content="The most comprehensive ICHRA FAQ for brokers and agents. Compliance, classes, affordability, HSAs, quoting, enrollment, AOR protection — everything you need to know.">
 </head>
 
 <body class="modern-body">
 
-    <!-- Top Navigation -->
     <nav class="top-navbar">
         <a href="/" class="nav-brand">
             <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
@@ -242,26 +228,44 @@
 
     <header class="inner-page-header gs-reveal">
         <div class="accent-mark" style="margin: 0 auto 1.5rem; text-align: center;">✦</div>
-        <h1 class="modern-title" style="color: #ffffff;">Frequently Asked <span class="text-gradient-gold">Questions</span></h1>
-        <p class="section-text" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">
-            Everything you need to know about ICHRA and how ICHRA Masters puts agents back in control.
+        <h1 class="modern-title" style="color: #ffffff;">ICHRA <span class="text-gradient-gold">Knowledge Base</span></h1>
+        <p class="section-text" style="color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 auto;">
+            Your comprehensive guide to understanding ICHRA — from compliance fundamentals to real-world enrollment strategies. Sourced from the <em>ICHRA Specialist Agent Training Manual (2026 Edition)</em>.
         </p>
     </header>
 
     <section class="faq-section">
 
-        <!-- Category: ICHRA Basics -->
-        <h2 class="faq-category-title gs-reveal">About ICHRA</h2>
+        <p class="faq-intro gs-reveal">Jump to a topic or scroll through all 40+ questions. Sources include the <a href="https://www.irs.gov/newsroom/irs-treasury-department-and-dol-issue-final-rules-on-health-reimbursement-arrangements" target="_blank" rel="noopener"><strong>IRS</strong></a>, <a href="https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/individual-coverage-health-reimbursement-arrangements" target="_blank" rel="noopener"><strong>Department of Labor</strong></a>, <a href="https://www.cms.gov/cciio/programs-and-initiatives/health-insurance-market-reforms/individual-coverage-hras" target="_blank" rel="noopener"><strong>HHS/CMS</strong></a>, <a href="https://www.healthcare.gov/have-job-based-coverage/ichra/" target="_blank" rel="noopener"><strong>HealthCare.gov</strong></a>, and the <strong>ICHRA Specialist Agent Training Manual</strong>.</p>
 
-        <div class="faq-item gs-reveal">
+        <!-- Quick Navigation -->
+        <div class="faq-nav gs-reveal">
+            <a href="#basics">ICHRA Basics <span class="faq-count">5</span></a>
+            <a href="#compliance">Compliance & Legal <span class="faq-count">6</span></a>
+            <a href="#classes">Classes & Contributions <span class="faq-count">5</span></a>
+            <a href="#hsa-fsa">HSAs, FSAs & Tax <span class="faq-count">4</span></a>
+            <a href="#employers">For Employers <span class="faq-count">5</span></a>
+            <a href="#employees">For Employees <span class="faq-count">5</span></a>
+            <a href="#enrollment">Enrollment & Shopping <span class="faq-count">4</span></a>
+            <a href="#platform">ICHRA Masters <span class="faq-count">4</span></a>
+            <a href="#broker-strategy">Broker Strategy <span class="faq-count">5</span></a>
+            <a href="#operations">Operations & Renewals <span class="faq-count">4</span></a>
+        </div>
+
+        <!-- ==================== SECTION 1: ICHRA BASICS ==================== -->
+        <h2 class="faq-category-title gs-reveal" id="basics">ICHRA Basics</h2>
+
+        <div class="faq-item gs-reveal open">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                What is ICHRA?
+                What is ICHRA (Individual Coverage Health Reimbursement Arrangement)?
                 <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="faq-answer">
                 <div class="faq-answer-inner">
-                    <p><strong>ICHRA (Individual Coverage Health Reimbursement Arrangement)</strong> is a health benefit model where employers provide a fixed, tax-free monthly allowance for employees to purchase their own individual health insurance plans on the open market.</p>
-                    <p>Unlike traditional group health insurance where the employer selects one plan for everyone, ICHRA gives employees the freedom to choose plans that fit their unique needs while giving employers predictable, controlled costs.</p>
+                    <p><strong>ICHRA (Individual Coverage Health Reimbursement Arrangement)</strong> is a health benefit model established by a <a href="https://www.federalregister.gov/documents/2019/06/20/2019-12571/health-reimbursement-arrangements-and-other-account-based-group-health-plans" target="_blank" rel="noopener">joint federal rule from the IRS, DOL, and HHS</a> effective January 1, 2020.</p>
+                    <p>Under ICHRA, employers provide a <strong>fixed, tax-free monthly allowance</strong> for employees to purchase their own individual health insurance plans on the <a href="https://www.healthcare.gov/" target="_blank" rel="noopener">ACA Marketplace (HealthCare.gov)</a>. Unlike traditional group health insurance where the employer selects one plan for everyone, ICHRA uses a <em>defined contribution</em> model — think of it as <strong>"the 401(k) for healthcare."</strong></p>
+                    <p>The employer promises a specific budget (e.g., $500/month), and the employee uses that budget to buy the plan that fits their life. The employer stops managing unpredictable claims and starts managing a fixed budget.</p>
+                    <span class="source-badge">Source: Federal Register Vol. 84 No. 119 (84 FR 28888) · IRS Notice 2018-88</span>
                 </div>
             </div>
         </div>
@@ -273,99 +277,678 @@
             </button>
             <div class="faq-answer">
                 <div class="faq-answer-inner">
-                    <p><strong>Traditional group insurance</strong> uses a <em>defined benefit</em> model — the employer selects one plan (or a few options) for all employees.</p>
-                    <p><strong>ICHRA</strong> uses a <em>defined contribution</em> model — the employer sets a monthly allowance and each employee chooses their own individual plan. This means more flexibility, more personalization, and more cost predictability for both sides.</p>
+                    <p><strong>Traditional group insurance</strong> uses a <em>defined benefit</em> model (like a pension) — the employer promises a specific result (a PPO with a $1,000 deductible) regardless of fluctuating cost. Premiums are based on the group's collective risk, and employers face unpredictable annual renewal increases — the "Renewal Heart Attack."</p>
+                    <p><strong>ICHRA</strong> uses a <em>defined contribution</em> model (like a 401k) — the employer sets a fixed monthly dollar allowance and each employee individually selects a plan on the ACA Marketplace.</p>
+                    <ul>
+                        <li><strong>No renewal surprises</strong> — the employer's budget is fixed and completely predictable</li>
+                        <li><strong>No participation minimums</strong> — unlike group plans, there is no 75% participation requirement</li>
+                        <li><strong>Employee choice</strong> — each person picks their own plan, network, and tier</li>
+                        <li><strong>Multi-state friendly</strong> — works seamlessly for remote and distributed teams</li>
+                        <li><strong>Risk decoupled</strong> — the insurance company owns the risk, not the employer. If a catastrophic claim hits, the employer's renewal stays flat</li>
+                    </ul>
+                    <span class="source-badge">Source: ICHRA Specialist Agent Training Manual — Module 1</span>
                 </div>
             </div>
         </div>
 
         <div class="faq-item gs-reveal">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                What size employers can use ICHRA?
+                What size employers can offer ICHRA?
                 <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="faq-answer">
                 <div class="faq-answer-inner">
-                    <p>ICHRA has <strong>no minimum or maximum employer size requirement</strong>. Any employer — from a 1-person company to a Fortune 500 corporation — can offer an ICHRA. It is especially popular with small and mid-sized businesses (SMBs) that want cost-predictable health benefits without the complexity of traditional group plans.</p>
+                    <p>Any employer regardless of size — from <strong>1 employee to 10,000+</strong> — can offer an ICHRA. There is no minimum or maximum employer size requirement under the <a href="https://www.irs.gov/newsroom/irs-treasury-department-and-dol-issue-final-rules-on-health-reimbursement-arrangements" target="_blank" rel="noopener">IRS final rule</a>.</p>
+                    <p>ICHRA is especially effective for:</p>
+                    <ul>
+                        <li><strong>Small businesses (2–50 employees)</strong> — simpler than group plan administration</li>
+                        <li><strong>Companies with multi-state employees</strong> — no need to maintain multiple state group plans</li>
+                        <li><strong>High-turnover industries</strong> (restaurants, retail, home health) — portability matters</li>
+                        <li><strong>Businesses hiring remote workers</strong> — multi-state hiring without plan redesign</li>
+                        <li><strong>Growth-stage companies</strong> — scalable benefit structure that adapts as headcount changes</li>
+                    </ul>
+                    <span class="source-badge">Source: <a href="https://www.law.cornell.edu/cfr/text/26/54.9802-4" target="_blank" rel="noopener">26 CFR § 54.9802-4</a></span>
                 </div>
             </div>
         </div>
 
         <div class="faq-item gs-reveal">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                Is ICHRA compliant with ACA requirements?
+                What is the difference between ICHRA and QSEHRA?
                 <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="faq-answer">
                 <div class="faq-answer-inner">
-                    <p>Yes. ICHRA was officially established by a <strong>federal rule in June 2019</strong> and is fully compliant with the Affordable Care Act (ACA). Employers who offer an ICHRA that meets affordability requirements satisfy the ACA employer mandate.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Category: ICHRA Masters Platform -->
-        <h2 class="faq-category-title gs-reveal">About ICHRA Masters</h2>
-
-        <div class="faq-item gs-reveal">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                What is ICHRA Masters?
-                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-                <div class="faq-answer-inner">
-                    <p>ICHRA Masters is a platform built <strong>specifically for licensed health insurance agents</strong> to quote, model, and enroll ICHRAs in real-time. Unlike other ICHRA platforms that require brokers to sign over their Agent of Record (AOR), ICHRA Masters lets agents keep 100% of their commissions and maintain full control of their book of business.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-item gs-reveal open">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                Do I need to sign over my AOR to use ICHRA Masters?
-                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-                <div class="faq-answer-inner">
-                    <p><strong>Absolutely not.</strong> ICHRA Masters was built on the principle that agents should never have to surrender their Agent of Record (AOR) to access ICHRA technology. You retain 100% ownership of your book of business, your commissions, and your client relationships. This is a core principle of the platform.</p>
+                    <p><strong>QSEHRA (Qualified Small Employer HRA)</strong> is limited to employers with <strong>fewer than 50 full-time employees</strong> who do not offer a group health plan. It has annual contribution caps set by the IRS and all employees must receive the same offer (no class customization).</p>
+                    <p><strong>ICHRA</strong> has <strong>no employer size restrictions</strong> and <strong>no contribution limits</strong>. Employers of any size can offer ICHRA, set any contribution amount, offer different amounts by employee class, and even run alongside a group plan for a different class. ICHRA is the "scale" vehicle; QSEHRA is the "simplicity" vehicle.</p>
+                    <span class="source-badge">Source: <a href="https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/individual-coverage-health-reimbursement-arrangements" target="_blank" rel="noopener">DOL ICHRA FAQ</a> · <a href="https://www.law.cornell.edu/uscode/text/26/9831" target="_blank" rel="noopener">IRC § 9831</a></span>
                 </div>
             </div>
         </div>
 
         <div class="faq-item gs-reveal">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                How much does ICHRA Masters cost to get started?
+                When was ICHRA created and why?
                 <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="faq-answer">
                 <div class="faq-answer-inner">
-                    <p>It's <strong>free to get started</strong> with ICHRA Masters. There is no upfront cost to begin quoting and enrolling ICHRAs. <a href="/contact" style="color: var(--brand-blue); font-weight: 600;">Schedule a strategy call</a> to learn about the complete pricing model and how ICHRA Masters fits into your agency.</p>
+                    <p>ICHRA was established by a <a href="https://www.federalregister.gov/documents/2019/06/20/2019-12571/health-reimbursement-arrangements-and-other-account-based-group-health-plans" target="_blank" rel="noopener">joint federal rule</a> published June 20, 2019, and took effect <strong>January 1, 2020</strong>. The rule was issued jointly by three agencies: the <strong>Internal Revenue Service (IRS)</strong>, the <strong>Department of Labor (DOL)</strong>, and the <strong>Department of Health and Human Services (HHS)</strong>.</p>
+                    <p>ICHRA was created to address the fundamental structural flaw in American employer health benefits: the "Renewal Heart Attack." For decades, employers were trapped in a defined benefit model with unpredictable claims-driven premium increases. ICHRA shifts the model to defined contribution, giving employers budget certainty while preserving employee access to comprehensive ACA-compliant coverage.</p>
+                    <span class="source-badge">Source: Federal Register 84 FR 28888 · Executive Order on Improving Price and Quality Transparency</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SECTION 2: COMPLIANCE ==================== -->
+        <h2 class="faq-category-title gs-reveal" id="compliance">Compliance & Legal</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Is ICHRA compliant with the Affordable Care Act (ACA)?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>Yes.</strong> ICHRA was officially authorized by a <a href="https://www.federalregister.gov/documents/2019/06/20/2019-12571/health-reimbursement-arrangements-and-other-account-based-group-health-plans" target="_blank" rel="noopener">joint federal rule</a> published in the Federal Register on June 20, 2019, issued jointly by the <strong>IRS</strong>, <strong>DOL</strong>, and <strong>HHS</strong>.</p>
+                    <p>Employers who offer an ICHRA that meets the <strong>affordability requirements</strong> satisfy the ACA employer mandate (<a href="https://www.law.cornell.edu/uscode/text/26/4980H" target="_blank" rel="noopener">Section 4980H</a>). Simply offering an ICHRA to at least 95% of full-time employees satisfies Penalty A. Ensuring the contribution makes the lowest-cost Silver plan affordable avoids Penalty B.</p>
+                    <span class="source-badge">Source: Federal Register 84 FR 28888 · <a href="https://www.cms.gov/cciio/programs-and-initiatives/health-insurance-market-reforms/individual-coverage-hras" target="_blank" rel="noopener">CMS.gov</a></span>
                 </div>
             </div>
         </div>
 
         <div class="faq-item gs-reveal">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                Can I quote ICHRA in real-time with my clients?
+                What is the ICHRA affordability test and how is it calculated?
                 <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="faq-answer">
                 <div class="faq-answer-inner">
-                    <p>Yes. ICHRA Masters provides a <strong>live quoting engine</strong> that lets you generate real-time ICHRA quotes while sitting with your clients. There is no need to send quotes to a third party and wait for them to come back — you control the entire quoting process from start to finish.</p>
+                    <p>For <strong>Applicable Large Employers (ALEs)</strong> — those with 50+ full-time equivalent employees — the ICHRA must pass an affordability test using this formula:</p>
+                    <p style="background: rgba(18,64,110,0.06); padding: 1rem; border-radius: 8px; font-weight: 600; text-align: center;">(LCSP Premium − ICHRA Allowance) &lt; (Monthly Income × 9.96%)</p>
+                    <p>The IRS provides <strong>three Safe Harbor methods</strong> since you rarely know exact household income:</p>
+                    <ol>
+                        <li><strong>W-2 Safe Harbor</strong> — Uses Box 1 wages. Most accurate but difficult for commissioned staff.</li>
+                        <li><strong>Rate of Pay</strong> — (Hourly rate × 130 hours) × 9.96%. Safest for hourly workers. Example: $15/hr × 130 = $1,950/mo → Affordability limit = $194/mo.</li>
+                        <li><strong>Federal Poverty Level (FPL)</strong> — The "Golden Shield." If affordable at FPL, it's affordable for everyone regardless of income. Requires a higher employer contribution.</li>
+                    </ol>
+                    <p><strong>Real-world example:</strong> Employee earning $4,000/month with a $500 LCSP premium and a $200 ICHRA allowance pays $300. Since $300 &lt; $398.40 (9.96% of $4,000), this is <strong>affordable</strong>.</p>
+                    <span class="source-badge">Source: <a href="https://www.irs.gov/pub/irs-drop/rp-25-25.pdf" target="_blank" rel="noopener">IRS Rev. Proc. 2025-25</a> · 26 CFR § 54.4980H-5</span>
                 </div>
             </div>
         </div>
 
-        <!-- Category: For Brokers -->
-        <h2 class="faq-category-title gs-reveal">For Brokers & Agents</h2>
-
         <div class="faq-item gs-reveal">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                How do I transition my group plan clients to ICHRA?
+                What are the ACA Employer Mandate penalties (Penalty A &amp; Penalty B)?
                 <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div class="faq-answer">
                 <div class="faq-answer-inner">
-                    <p>The transition involves: <strong>modeling the employer's current costs</strong>, designing employee classes, setting contribution amounts, and guiding employees through individual plan selection. ICHRA Masters provides the software infrastructure to handle every step of this process while you maintain the client relationship.</p>
-                    <p><a href="/blogs" style="color: var(--brand-blue); font-weight: 600;">Read our guide on transitioning to ICHRA →</a></p>
+                    <p>The IRS imposes two "Pay or Play" penalties on ALEs who fail to follow the Employer Shared Responsibility Provisions:</p>
+                    <p><strong>Penalty A — "The Sledgehammer" (<a href="https://www.law.cornell.edu/cfr/text/26/54.4980H-4" target="_blank" rel="noopener">Section 4980H(a)</a>):</strong></p>
+                    <ul>
+                        <li><strong>Trigger:</strong> Failing to offer Minimum Essential Coverage to at least 95% of full-time employees</li>
+                        <li><strong>Cost:</strong> Approximately <strong>$2,970 per employee per year</strong> (indexed annually)</li>
+                        <li><strong>The catch:</strong> The fine applies to <em>every</em> full-time employee (minus the first 30), not just those missed</li>
+                        <li><strong>ICHRA fix:</strong> Simply offering the ICHRA to 95% of employees satisfies Penalty A completely</li>
+                    </ul>
+                    <p><strong>Penalty B — "The Tack Hammer" (<a href="https://www.law.cornell.edu/cfr/text/26/54.4980H-5" target="_blank" rel="noopener">Section 4980H(b)</a>):</strong></p>
+                    <ul>
+                        <li><strong>Trigger:</strong> Offering coverage that is unaffordable AND a specific employee receives a tax subsidy on the Exchange</li>
+                        <li><strong>Cost:</strong> Approximately <strong>$4,460 per subsidized employee per year</strong></li>
+                        <li><strong>ICHRA fix:</strong> Setting contributions that pass the affordability test eliminates Penalty B risk</li>
+                    </ul>
+                    <span class="source-badge">Source: IRC § 4980H · ICHRA Specialist Agent Training Manual — Module 3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What is the "Family Glitch" and how does it affect ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The Family Glitch is the <strong>most misunderstood concept in the ICHRA market</strong>. Here's the critical rule:</p>
+                    <p>ICHRA affordability is calculated based strictly on the <strong>employee-only</strong> Lowest Cost Silver Plan. If the employer's ICHRA offer is deemed affordable for the employee's self-only coverage, the <strong>entire family is disqualified from subsidies (APTCs)</strong> on the Exchange — even if adding the spouse and kids costs $2,000/month and the allowance is only $400.</p>
+                    <p>This creates a strategic decision for employers:</p>
+                    <ul>
+                        <li><strong>Option A ("Affordable Path"):</strong> Offer a high allowance → no employer penalties, but employees with families pay full price for dependents with no subsidy help</li>
+                        <li><strong>Option B ("Unaffordable Path"):</strong> Intentionally offer a lower allowance → the employee and family can waive the ICHRA and take the full subsidy on the Exchange. The employer may pay Penalty B, but it may be cheaper than funding a rich ICHRA for the whole family</li>
+                    </ul>
+                    <span class="source-badge">Source: <a href="https://www.federalregister.gov/documents/2022/10/13/2022-22184/coverage-of-certain-preventive-services-under-the-affordable-care-act" target="_blank" rel="noopener">Treasury Decision 9968</a> · Training Manual — Module 3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What happens to premium tax credits (PTC) when an employer offers ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>If an employer offers an <strong>affordable ICHRA</strong>, the employee is <strong>not eligible for premium tax credits (PTC)</strong> on the <a href="https://www.healthcare.gov/have-job-based-coverage/ichra/" target="_blank" rel="noopener">HealthCare.gov Marketplace</a>.</p>
+                    <p>If the ICHRA is <strong>unaffordable</strong>, the employee must choose between two mutually exclusive outcomes:</p>
+                    <ol>
+                        <li><strong>Accept the ICHRA:</strong> They lose all subsidies</li>
+                        <li><strong>Waive the ICHRA:</strong> They unlock the subsidies on the Exchange</li>
+                    </ol>
+                    <p><strong>Critical warning:</strong> An employee cannot "double dip" — taking ICHRA funds <em>and</em> federal premium tax credits is considered tax fraud and results in an IRS clawback.</p>
+                    <span class="source-badge">Source: <a href="https://www.healthcare.gov/have-job-based-coverage/ichra/" target="_blank" rel="noopener">HealthCare.gov — ICHRA and the Marketplace</a> · <a href="https://www.law.cornell.edu/uscode/text/26/36B" target="_blank" rel="noopener">IRC § 36B</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What are "Controlled Groups" and why do they matter for ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>Under <a href="https://www.law.cornell.edu/uscode/text/26/414" target="_blank" rel="noopener">IRS Controlled Group rules (IRC § 414)</a>, if a business owner has multiple companies, they are treated as <strong>one single employer</strong> for ALE status.</p>
+                    <p><strong>Example:</strong> An owner has three LLCs — Company A (5 employees), Company B (8 employees), Company C (3 employees). He thinks he's a "small employer." But under the IRS rule, these companies are <strong>aggregated to 16 employees</strong> and treated as one entity. If the total hits 50+, they're an ALE subject to employer mandate penalties.</p>
+                    <p>Ignoring Controlled Group rules can cause the plan to fail discrimination testing and trigger <strong>massive IRS penalties</strong>. Always aggregate headcount across commonly owned entities.</p>
+                    <span class="source-badge">Source: <a href="https://www.law.cornell.edu/uscode/text/26/414" target="_blank" rel="noopener">IRC § 414</a> · Training Manual — Module 2</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SECTION 3: CLASSES ==================== -->
+        <h2 class="faq-category-title gs-reveal" id="classes">Classes & Contributions</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What are the 11 IRS-permitted ICHRA employee classes?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The <a href="https://www.law.cornell.edu/cfr/text/26/54.9802-4" target="_blank" rel="noopener">IRS defines 11 permitted employee classes</a> — the "secret sauce" of ICHRA. Terms must be uniform within each class but can vary wildly between them:</p>
+                    <ol>
+                        <li><strong>Full-time employees</strong> (30+ hours/week) — often the highest allowance</li>
+                        <li><strong>Part-time employees</strong> (&lt;30 hours/week) — typically a lower allowance</li>
+                        <li><strong>Salaried employees</strong> — differentiates management from general workforce</li>
+                        <li><strong>Non-salaried (hourly) employees</strong> — different contribution strategy</li>
+                        <li><strong>Seasonal employees</strong> — may be excluded or offered pro-rated allowance</li>
+                        <li><strong>Temporary employees (staffing firms)</strong> — often excluded to reduce overhead</li>
+                        <li><strong>Union employees (CBA)</strong> — must be classified separately</li>
+                        <li><strong>Waiting period employees</strong> (30/60/90-day new hires) — coverage after retention period</li>
+                        <li><strong>Non-resident aliens</strong> with no US-source income — generally excluded</li>
+                        <li><strong>Employees by geographic location</strong> (rating area) — critical for equalizing buying power across expensive vs. affordable markets</li>
+                        <li><strong>Any combination of the above</strong> — e.g., "Full-Time Hourly + Living in California"</li>
+                    </ol>
+                    <span class="source-badge">Source: <a href="https://www.law.cornell.edu/cfr/text/26/54.9802-4" target="_blank" rel="noopener">26 CFR § 54.9802-4</a> · Training Manual — Module 2</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What is the most common class design mistake?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The single most common mistake is <strong>defaulting to one class called "Full Time"</strong> and calling it a day. That works for a small 10-person LLC, but it falls apart the moment you have hourly workers, multi-state hires, or a waiting period for new employees.</p>
+                    <p><strong>The fix (from the Training Manual):</strong></p>
+                    <ul>
+                        <li>Look at the client's census <strong>before</strong> you touch the quoting portal</li>
+                        <li>Identify natural groupings — Salary vs Hourly, HQ vs Remote, waiting period status</li>
+                        <li>Build a class for each group, even if some get the same contribution</li>
+                    </ul>
+                    <p>Classes protect your client from ACA mandate penalties. They also create budget flexibility — different groups, different contributions, all 100% compliant under the IRS's 11 permitted classes.</p>
+                    <span class="source-badge">Source: Training Manual — Module 2 (Day 2 Training)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Are there contribution limits for ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>No.</strong> Unlike QSEHRA, there is <strong>no annual contribution limit</strong> for ICHRA. Employers can set any monthly contribution amount they choose.</p>
+                    <p>Contributions can also be adjusted by age using the <strong>IRS-approved 3:1 age-banding ratio</strong>. Since premiums rise with age, a flat $400 allowance might be affordable for a 25-year-old but unaffordable for a 60-year-old. The age-banding feature increases the allowance as the employee ages, keeping the "net cost" roughly the same for everyone and ensuring affordability across the board.</p>
+                    <span class="source-badge">Source: Training Manual — Module 3 ("Age-Banded Shortcut")</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What are class size minimums (anti-cherry-picking rules)?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>If an employer offers a Traditional Group Plan to one class and ICHRA to another, they must meet minimum headcount requirements for the ICHRA class to prevent "cherry-picking" (keeping a rich group plan for managers while dumping sick employees into the individual market):</p>
+                    <ul>
+                        <li><strong>Fewer than 100 employees:</strong> Minimum class size is 10 employees</li>
+                        <li><strong>100–200 employees:</strong> Minimum class size is 10% of the total workforce</li>
+                        <li><strong>More than 200 employees:</strong> Minimum class size is 20 employees</li>
+                    </ul>
+                    <p><strong>Important exceptions:</strong> These minimums do <strong>NOT</strong> apply if (1) the employer only offers ICHRA (no group plan involved), or (2) the class is based on a "New Hire" subclass.</p>
+                    <span class="source-badge">Source: <a href="https://www.law.cornell.edu/cfr/text/26/54.9802-4" target="_blank" rel="noopener">26 CFR § 54.9802-4</a> · Training Manual — Module 2</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How do ICHRA reimbursements work?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The reimbursement lifecycle follows five steps:</p>
+                    <ol>
+                        <li><strong>Selection:</strong> Employee shops via the TPA portal or quoting platform link</li>
+                        <li><strong>Attestation:</strong> Employee signs a monthly statement confirming they have Minimum Essential Coverage (MEC) — no verification = no reimbursement</li>
+                        <li><strong>Payroll deduction:</strong> The difference between the premium and ICHRA allowance is deducted from the employee's paycheck (pre-tax via Section 125 if using TPA Aggregation)</li>
+                        <li><strong>Consolidated funding:</strong> Employer transfers total funds (employee deduction + employer contribution) to the TPA</li>
+                        <li><strong>Payment facilitation:</strong> The TPA pays the insurance carrier directly, ensuring the carrier is paid on time and the employee doesn't have to "float" the premium</li>
+                    </ol>
+                    <p><strong>Critical rule:</strong> You <strong>cannot</strong> just give employees cash. It must be a tax-advantaged reimbursement for substantiated Minimum Essential Coverage. Your TPA automates the verification.</p>
+                    <span class="source-badge">Source: Training Manual — Module 2 (Operational Mechanics)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SECTION 4: HSAs & FSAs ==================== -->
+        <h2 class="faq-category-title gs-reveal" id="hsa-fsa">HSAs, FSAs & Tax Strategy</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Is ICHRA compatible with Health Savings Accounts (HSAs)?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>Yes, but only if structured correctly.</strong> The IRS views an ICHRA as a "secondary health plan." If it reimburses medical expenses (copays, prescriptions) from day one, it's considered <strong>"disqualifying coverage"</strong> and the employee loses HSA eligibility.</p>
+                    <p>Three configurations exist:</p>
+                    <ul>
+                        <li><strong>Level 1: "Premium-Only" ICHRA (Most Common):</strong> ICHRA only reimburses insurance premiums. It never touches medical bills, so it doesn't count as disqualifying coverage. Employees can buy an HSA-qualified plan and fund their HSA normally.</li>
+                        <li><strong>Level 2: "Post-Deductible" ICHRA (Advanced):</strong> ICHRA "sits on the sidelines" until the employee meets the IRS minimum deductible ($1,650+ for individuals). Then it unlocks and reimburses expenses for the rest of the year.</li>
+                        <li><strong>Level 3: "Employee Choice" (Mixed Populations):</strong> During onboarding, the system asks "Do you have an HSA?" If yes → Premium-Only mode. If no → Full medical reimbursement unlocked.</li>
+                    </ul>
+                    <span class="source-badge">Source: <a href="https://www.law.cornell.edu/uscode/text/26/223" target="_blank" rel="noopener">IRC § 223</a> · <a href="https://www.irs.gov/irb/2004-22_IRB#RR-2004-45" target="_blank" rel="noopener">IRS Revenue Ruling 2004-45</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Can employees have an FSA alongside ICHRA? What about "double dipping"?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>Yes,</strong> FSAs are the perfect companion to ICHRA, but there is a strict <strong>"No Double-Dipping" rule</strong> — an employee cannot be reimbursed for the same dollar twice.</p>
+                    <p>Modern TPAs solve this with <strong>Expense Stacking Logic</strong>:</p>
+                    <ol>
+                        <li><strong>Waterfall payment:</strong> When a claim is submitted, the system checks the ICHRA balance first</li>
+                        <li><strong>Automatic routing:</strong> If ICHRA pays the claim, the FSA is locked for that transaction. If ICHRA is empty, the claim flows to the FSA</li>
+                        <li><strong>Result:</strong> The receipt is "stamped" as paid, preventing fraud without manual spreadsheet work</li>
+                    </ol>
+                    <p><strong>Pro tip:</strong> If your client wants to offer HSAs, recommend a <strong>Limited Purpose FSA (LPFSA)</strong> — it only pays for dental and vision expenses, preserving HSA funds for long-term growth.</p>
+                    <span class="source-badge">Source: <a href="https://www.irs.gov/pub/irs-drop/n-13-54.pdf" target="_blank" rel="noopener">IRS Notice 2013-54</a> · Training Manual — Module 4</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Can S-Corp owners participate in ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>S-Corp owners (&gt;2% shareholders) cannot receive tax-free ICHRA reimbursements.</strong> This is the #1 point of friction during a sale. Here's how each ownership type works:</p>
+                    <ul>
+                        <li><strong>C-Corp owners:</strong> Treated as W-2 employees. They can participate tax-free ✓</li>
+                        <li><strong>LLC/Partnership owners:</strong> Not W-2 employees. Cannot receive tax-free reimbursements, but can deduct premiums on their personal returns</li>
+                        <li><strong>S-Corp owners (&gt;2%):</strong> Reimbursements must be added to their <strong>W-2 Box 1 as taxable income</strong>, though they are generally exempt from FICA taxes. The owner then takes the "Self-Employed Health Insurance Deduction" on their 1040, making it effectively pre-tax for income tax purposes</li>
+                    </ul>
+                    <p><strong>Payroll warning:</strong> Instruct the payroll administrator to manually flag any S-Corp owner. Do <em>not</em> use standard pre-tax or post-tax deduction codes for these individuals.</p>
+                    <span class="source-badge">Source: <a href="https://www.irs.gov/pub/irs-drop/n-08-01.pdf" target="_blank" rel="noopener">IRS Notice 2008-1</a> · <a href="https://www.law.cornell.edu/uscode/text/26/1372" target="_blank" rel="noopener">IRC § 1372</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What is the 7.65% FICA payroll tax bonus with ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>When employees pay their share of premiums <strong>pre-tax via Section 125</strong>, it lowers their taxable wage base. The employer does not pay the <strong>7.65% FICA match</strong> (Social Security + Medicare) on those contributions.</p>
+                    <p><strong>The pitch:</strong> "Mr. Employer, for every $100 your employees contribute pre-tax, you save $7.65 in payroll taxes. Across 50 employees contributing $200/month, that's over $9,000/year in savings — often enough to cover an entire consulting fee."</p>
+                    <p><strong>Requirement:</strong> To use pre-tax deductions, the employer must have a signed <strong>Section 125 Premium Only Plan (POP) document</strong>, and the TPA must use Aggregation (employer → TPA → carrier payment flow).</p>
+                    <span class="source-badge">Source: IRC § 125 · Training Manual — Module 4</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SECTION 5: FOR EMPLOYERS ==================== -->
+        <h2 class="faq-category-title gs-reveal" id="employers">For Employers</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Will ICHRA save my business money compared to group insurance?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>In most cases, <strong>yes</strong>. With ICHRA, the employer's spend is <strong>fixed and predictable</strong>. There are no renewal negotiations, no carrier rate increases passed to the employer, and no surprise premium hikes. Premiums went up double digits in many markets over the last three years. With ICHRA, your contribution is your decision.</p>
+                    <p>The savings come from multiple sources:</p>
+                    <ul>
+                        <li><strong>Budget certainty:</strong> You set the number, not the carrier</li>
+                        <li><strong>No claims risk:</strong> Catastrophic claims hit the carrier, not your renewal</li>
+                        <li><strong>FICA savings:</strong> Pre-tax employee contributions save the employer 7.65% in payroll taxes</li>
+                        <li><strong>No participation stress:</strong> No 75% minimum enrollment requirements</li>
+                    </ul>
+                    <span class="source-badge">Source: Training Manual — Module 1 (The Budget Shield)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                "What if our renewal goes up under ICHRA?"
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>It can't.</strong> You set the budget. Your contribution is what you decide it is — there's no renewal negotiation, no carrier rate increase passed to you. The only variable is whether <em>you</em> decide to raise contributions, which you control entirely.</p>
+                    <p>Individual plan premiums on the Marketplace may fluctuate year to year, but the <strong>employer's cost is locked</strong> at whatever monthly contribution they set. ICHRA renewal is a <strong>math adjustment, not a negotiation</strong>. You recalibrate contributions based on updated LCSP data, not claims history.</p>
+                    <span class="source-badge">Source: Training Manual — Day 35 Objection Handling</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Can I use ICHRA as a hybrid strategy alongside my current group plan?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>Yes — this is one of the most powerful strategies in the Training Manual.</strong> Two common hybrid approaches:</p>
+                    <p><strong>Scenario A: The Geographic Pivot</strong> — A tech company in Denver has 10 employees in rural Nebraska where no group network exists. Move the Nebraska team to a "Geographic Class" and offer them an ICHRA to buy local plans, while keeping Denver employees on the group plan.</p>
+                    <p><strong>Scenario B: The "New Hire" Gradual Transition</strong> — Keep everyone hired before 1/1/2025 on the existing group plan. Everyone hired <em>after</em> that date goes into the ICHRA. Over 3–5 years, the group plan naturally sunsets through attrition — zero employee revolt.</p>
+                    <span class="source-badge">Source: Training Manual — Module 2 (Hybrid Strategy)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Which employers should consider ICHRA first?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>Based on the Training Manual, prioritize employers who fit any of these criteria:</p>
+                    <ul>
+                        <li><strong>Renewing at +10% or more</strong> — they're already looking for an exit from rising premiums</li>
+                        <li><strong>Employees in 2+ states</strong> — group plans rarely serve distributed teams well</li>
+                        <li><strong>Under 20 FTEs</strong> — admin burden of a group plan eats their margin</li>
+                        <li><strong>High-turnover industries</strong> (restaurants, retail, home health) — portability matters</li>
+                        <li><strong>Adding remote workers</strong> — multi-state hiring without plan redesign</li>
+                    </ul>
+                    <p><strong>When ICHRA may NOT be a fit:</strong> (1) "Network Deserts" where the dominant hospital system is absent from the Individual Market, (2) very small groups (under 5 lives) with high average age where group rates may actually be cheaper, (3) organizations with zero digital literacy.</p>
+                    <span class="source-badge">Source: Training Manual — Module 1 (Strategic Optimization) · Day 24 Training</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What is a TPA and why is it mandatory for ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>A <strong>Third-Party Administrator (TPA)</strong> is not optional — it is a <strong>legal and operational mandate</strong>. You cannot administer an ICHRA on a spreadsheet. The TPA performs four non-negotiable functions:</p>
+                    <ol>
+                        <li><strong>The HIPAA Firewall:</strong> Shields the employer from Protected Health Information (PHI) — the TPA sees claims internally and only reports "Approved/Denied" to the employer</li>
+                        <li><strong>The Gatekeeper (Substantiation):</strong> Verifies the employee's insurance is active and meets MEC before releasing a single dollar. Without this, reimbursements are tax fraud</li>
+                        <li><strong>The Banker (Aggregation):</strong> Receives one lump-sum check from the employer, splits it, and distributes individual payments to employees or carriers</li>
+                        <li><strong>The Reporter (Compliance):</strong> Automatically generates IRS Form 1095-C codes (1L, 1M, 1N), Form 720 (PCORI fee), and Form 5500 based on enrollment data</li>
+                    </ol>
+                    <p>Think of the quoting platform as the dashboard where you design the car, and the TPA as the engine that drives it.</p>
+                    <span class="source-badge">Source: Training Manual — Module 6 (Implementation & Logistics)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SECTION 6: FOR EMPLOYEES ==================== -->
+        <h2 class="faq-category-title gs-reveal" id="employees">For Employees</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Can employees keep their current doctors under ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>Yes.</strong> Under ICHRA, employees shop for individual plans on the <a href="https://www.healthcare.gov/" target="_blank" rel="noopener">ACA Marketplace</a>. They can choose plans from the <strong>same carriers and networks</strong> they had before. The CEO can keep their Blue Cross; the remote worker in Florida gets a local Florida Blue plan.</p>
+                    <p><strong>The network reality:</strong> Individual networks (EPOs, specialized PPOs) are designed for regional efficiency. Before pitching a client, modern quoting platforms ingest the census and show exactly which doctors are "In-Network" for every single employee — flagging any "coverage gaps" before you present a proposal.</p>
+                    <span class="source-badge">Source: Training Manual — Module 0 (Network Advantage)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                "Our employees won't know how to pick a plan" — is this a real concern?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>No.</strong> The Training Manual addresses this as the #1 employer objection. ICHRA Masters provides structured enrollment support — guided plan selection, side-by-side plan comparisons, and a dedicated questions line. Most employees finish enrollment in <strong>under 20 minutes</strong>.</p>
+                    <p>The shopping experience is straightforward:</p>
+                    <ol>
+                        <li><strong>Login:</strong> Employee sees their monthly allowance (e.g., "$500/month")</li>
+                        <li><strong>Compare:</strong> The system ranks plans by "Net Cost" (Premium minus Allowance) and filters by doctor/prescription</li>
+                        <li><strong>Select:</strong> Employee picks a plan and provides enrollment details</li>
+                    </ol>
+                    <span class="source-badge">Source: Training Manual — Module 5 · Day 35 Objection Handling</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What if an employee's ICHRA allowance doesn't cover the full premium?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The employee pays the difference out of pocket. However, they have the freedom to choose a plan at a price point that works — they can select a lower-tier plan (Bronze instead of Gold) to keep costs minimal.</p>
+                    <p><strong>The "Zero-Dollar" Trap:</strong> If an employee has a $500 allowance but buys a $400 plan, they do <em>not</em> get to keep the extra $100. It stays with the employer. Strategy: Encourage them to use that "extra" money to buy a better plan (Gold/Platinum) since it costs them nothing out of pocket.</p>
+                    <p>If the ICHRA is deemed <strong>unaffordable</strong> under IRS rules, the employee can opt out entirely and receive <a href="https://www.healthcare.gov/glossary/premium-tax-credit/" target="_blank" rel="noopener">premium tax credits</a> on the Marketplace.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What are the employee's ongoing responsibilities under ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>From the Training Manual's <strong>"Bill of Responsibilities"</strong> — employees must understand three ongoing duties:</p>
+                    <ol>
+                        <li><strong>Monthly Attestation ("The Truth Requirement"):</strong> Every month, verify with the TPA that you still have coverage. No verification = no reimbursement</li>
+                        <li><strong>Payment Discipline:</strong> Premium payments must be made on time. Use Auto-Pay or a TPA payment solution to prevent policy cancellation and ICHRA fund suspension</li>
+                        <li><strong>The "Double Dip" Warning:</strong> If you accept ICHRA funds, you must stop any federal premium tax credits immediately. Taking both is tax fraud and results in an IRS clawback at tax time</li>
+                    </ol>
+                    <p><strong>What you CAN'T use ICHRA funds for:</strong> Healthcare Sharing Ministries, Short-Term Medical Plans (not MEC), or a spouse's group plan (pre-tax double dipping).</p>
+                    <span class="source-badge">Source: Training Manual — Module 5 (Bill of Responsibilities)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How does ICHRA work for employees on Medicare?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>ICHRA can reimburse Medicare premiums, but the process differs by coverage type:</p>
+                    <ul>
+                        <li><strong>Medicare Part D (Rx) and Medigap:</strong> These bill the senior directly — treat like normal receipts and submit to the TPA</li>
+                        <li><strong>Medicare Part B:</strong> Deducted automatically from Social Security. Use the <strong>"COLA Letter" Workflow</strong> — upload the Social Security benefit verification letter once, and the TPA sets up a recurring monthly reimbursement automatically</li>
+                    </ul>
+                    <p><strong>Critical rules for employers with 20+ employees:</strong> ICHRA is Primary to Medicare (Medicare Secondary Payer rules). You <strong>cannot offer any financial incentive</strong> for an active employee to drop ICHRA and go on Medicare — this is a violation of MSP rules with fines up to <strong>$11,524 per violation</strong>.</p>
+                    <p><strong>Never</strong> attempt to pay Medicare directly. The money must go to the employee as reimbursement.</p>
+                    <span class="source-badge">Source: Training Manual — Module 6 & 9 (Medicare Exception)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SECTION 7: ENROLLMENT ==================== -->
+        <h2 class="faq-category-title gs-reveal" id="enrollment">Enrollment & Shopping</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What is the ICHRA Special Enrollment Period (SEP) and how is it triggered?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The <strong>Notice of Offer</strong> is a mandatory legal document that triggers a <strong>60-day Special Enrollment Period (SEP)</strong> — the "Golden Ticket" that allows employees to purchase individual health insurance outside of the standard Open Enrollment window.</p>
+                    <ul>
+                        <li><strong>New launches:</strong> Employees have 60 days before and 60 days after the ICHRA start date to pick a plan</li>
+                        <li><strong>Annual renewals:</strong> Employers must re-issue the Notice of Offer <strong>90 days before the start of the new plan year</strong> (e.g., by October 3rd for a January 1st renewal). This is a legal requirement, not optional</li>
+                    </ul>
+                    <p><strong>The "15th of the Month" Deadline:</strong> To have coverage start on January 1st, the application generally must be submitted by December 15th. Missing this date means coverage may not start until February 1st, leaving the employee uninsured for a month.</p>
+                    <span class="source-badge">Source: <a href="https://www.law.cornell.edu/cfr/text/45/155.420" target="_blank" rel="noopener">45 CFR § 155.420</a> · Training Manual — Module 5</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What is the "Binder Payment" and why does it matter?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The <strong>binder payment</strong> is the first month's premium — the "first month's rent" that activates the insurance policy. Even if an employee is <em>enrolled</em>, the policy is <strong>not active</strong> until that first payment clears.</p>
+                    <p>This creates the <strong>"Cash Flow Gap" (Binder Paradox)</strong>: Most TPAs won't release ICHRA funds until they see proof of coverage, but the carrier won't issue an ID card until they receive the binder. Three solutions:</p>
+                    <ol>
+                        <li><strong>Payroll Advance:</strong> The employer runs a one-time advance 15 days before the plan starts</li>
+                        <li><strong>Virtual Card Advance:</strong> The TPA distributes a single-use virtual credit card pre-loaded with the exact binder amount, restricted to insurance premium merchant codes</li>
+                        <li><strong>The "Loud Warning":</strong> Explicitly tell employees during onboarding that they must pay the first premium on their personal card before reimbursement begins</li>
+                    </ol>
+                    <span class="source-badge">Source: <a href="https://www.law.cornell.edu/cfr/text/45/155.400" target="_blank" rel="noopener">45 CFR § 155.400(e)</a> · Training Manual — Module 6</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What is the "No Steerage" rule and ERISA Safe Harbor?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>This is the <strong>most dangerous legal trap in ICHRA</strong>. If an employer crosses the line and "endorses" a specific plan, they risk creating a Group Health Plan made up of individual policies — triggering a compliance nightmare.</p>
+                    <p>The <strong>ERISA Safe Harbor</strong> requires four criteria:</p>
+                    <ol>
+                        <li><strong>Voluntary participation:</strong> Purchasing individual insurance is completely voluntary</li>
+                        <li><strong>No endorsement:</strong> The employer does not select or endorse any particular carrier or coverage</li>
+                        <li><strong>No profit:</strong> The employer receives no kickbacks from the employee's selection</li>
+                        <li><strong>Sole responsibility:</strong> Reimbursement is limited to actual premiums; the employer doesn't pay claims</li>
+                    </ol>
+                    <p>The employer <em>can</em> provide neutral information ("In your zip code, there are plans from Cigna, Blue Cross, and Ambetter. The choice is entirely yours.") but cannot push a specific product.</p>
+                    <span class="source-badge">Source: ERISA Safe Harbor · Training Manual — Module 5</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How does COBRA work with ICHRA when an employee is terminated?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>There's a critical distinction between the policy and the allowance:</p>
+                    <ul>
+                        <li><strong>The insurance policy:</strong> The employee <em>owns</em> it. When they quit, they keep the policy and pay 100% of the bill themselves. This is <strong>portability</strong>, not COBRA</li>
+                        <li><strong>The HRA allowance:</strong> This is the employer's money and <em>is</em> subject to COBRA</li>
+                    </ul>
+                    <p><strong>For employers with 20+ employees (Federal COBRA):</strong></p>
+                    <ul>
+                        <li>Must send a <strong>COBRA Election Notice within 14 days</strong> of termination</li>
+                        <li>The cost is typically the monthly allowance + 2% administrative fee (e.g., $500 allowance → $510 COBRA payment)</li>
+                        <li>Most employees decline since they keep their policy regardless</li>
+                    </ul>
+                    <p><strong>For employers with &lt;20 employees:</strong> Exempt from Federal COBRA, but may be subject to <strong>State Mini-COBRA laws</strong>. Verify if your state includes HRAs in its definition of "group health coverage."</p>
+                    <span class="source-badge">Source: <a href="https://www.dol.gov/agencies/ebsa/laws-and-regulations/laws/cobra" target="_blank" rel="noopener">DOL COBRA Guide</a> · <a href="https://www.irs.gov/pub/irs-drop/n-02-45.pdf" target="_blank" rel="noopener">IRS Notice 2002-45</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SECTION 8: ICHRA MASTERS ==================== -->
+        <h2 class="faq-category-title gs-reveal" id="platform">ICHRA Masters Platform</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What is ICHRA Masters and how is it different from other platforms?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>ICHRA Masters</strong> is the only ICHRA platform built <strong>by agents, for agents</strong>. It provides:</p>
+                    <ul>
+                        <li><strong>Real-time quoting</strong> — generate ICHRA quotes while sitting with your client, no outsourcing required</li>
+                        <li><strong>Automated affordability checks</strong> — every quote runs against the Lowest Cost Silver Plan in each employee's rating area. Green = affordable. Red = adjust the contribution</li>
+                        <li><strong>Plan modeling</strong> — build, break, and rebuild quotes with the live Quote Modeling tool</li>
+                        <li><strong>Class design engine</strong> — model various class structures and visualize contribution levels for compliance</li>
+                        <li><strong>Seamless enrollment</strong> — move from quote to enrollment without back-and-forth</li>
+                        <li><strong>Full client management</strong> — accounts, renewals, census management, and changes in one place</li>
+                    </ul>
+                    <p>The critical difference: <strong>you never sign over your AOR</strong>. Your National Producer Number (NPN) is hard-coded into every transaction so you retain full control and full commission.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Do I need to sign over my Agent of Record (AOR) to use ICHRA Masters?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>Absolutely not.</strong> This is a core principle of the platform. ICHRA Masters never requires agents to surrender their AOR. You retain <strong>100% ownership</strong> of your book of business, your commissions, and your client relationships.</p>
+                    <p>As the Training Manual warns: some "Direct-to-Employer" tech firms silently insert <em>their own</em> National Producer Number (NPN) into the application flow, stealing your commission and AOR status. ICHRA Masters was built specifically to prevent this.</p>
+                    <p><a href="/lies">Read about the 3 biggest lies in the ICHRA industry →</a></p>
+                    <span class="source-badge">Source: Training Manual — Module 8 (Protecting the AOR)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How much does ICHRA Masters cost?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>It's <strong>free to get started</strong>. There is no upfront cost to begin quoting and enrolling ICHRAs on the platform. <a href="/contact">Schedule a strategy call</a> to learn about the complete pricing model and see a live demo.</p>
                 </div>
             </div>
         </div>
@@ -377,21 +960,210 @@
             </button>
             <div class="faq-answer">
                 <div class="faq-answer-inner">
-                    <p>ICHRA Masters is based in <strong>North Augusta, Georgia</strong>, and serves licensed health insurance agents <strong>nationwide across the United States</strong>.</p>
+                    <p>ICHRA Masters is headquartered in <strong>North Augusta, Georgia</strong>, and serves licensed health insurance agents and brokers <strong>nationwide across all 50 United States</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SECTION 9: BROKER STRATEGY ==================== -->
+        <h2 class="faq-category-title gs-reveal" id="broker-strategy">Broker Strategy</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How do I pitch ICHRA to an employer in under 30 seconds?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>From the Training Manual (Day 5): Most brokers over-explain ICHRA with carrier sheets and 12-slide decks. The employer's eyes glaze over by slide 3. Here's the <strong>three-sentence pitch:</strong></p>
+                    <ol>
+                        <li>"You set a budget you can actually predict. Same number every month, no surprise renewals."</li>
+                        <li>"Your employees pick their own plan with that money — same carriers they'd see on Healthcare.gov, but pre-tax through you."</li>
+                        <li>"You stay out of the renewal hamster wheel. I stay your advisor. Compliance is handled."</li>
+                    </ol>
+                    <p>If they want details, they'll ask. If they don't, you've delivered the value prop in 20 seconds.</p>
+                    <span class="source-badge">Source: Training Manual — Day 5 (The Three-Sentence Pitch)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How do I handle the top 4 employer objections?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>From the Training Manual's <strong>Objection Handling Module</strong>:</p>
+                    <p><strong>❶ "Our employees won't know how to pick a plan."</strong><br>We provide structured enrollment support — guided selection, plan comparison, dedicated questions line. Most employees finish in under 20 minutes.</p>
+                    <p><strong>❷ "What if our renewal goes up?"</strong><br>It can't. You set the budget. There's no renewal negotiation, no carrier rate increase passed to you. The only variable is whether <em>you</em> decide to raise contributions.</p>
+                    <p><strong>❸ "Our employees love our current plan."</strong><br>Then they'll love this more. Under ICHRA, they can keep the same network, same doctor, often the same carrier — and get a plan tier that matches <em>their</em> family instead of an average.</p>
+                    <p><strong>❹ "This sounds risky."</strong><br>The risk is in staying put. Premiums went up double digits the last three years. With ICHRA, your spend is fixed. The risk profile is actually <em>lower</em> than the group plan you're on now.</p>
+                    <span class="source-badge">Source: Training Manual — Day 35 (Objection Handling)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How do agents earn more money with ICHRA than traditional group plans?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The myth that ICHRA means a pay cut is <strong>false</strong>. When structured correctly, the ICHRA "Revenue Stack" often exceeds a traditional group policy:</p>
+                    <table style="width:100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem;">
+                        <tr style="background: rgba(18,64,110,0.06);"><th style="text-align:left; padding: 0.5rem;">Traditional Group</th><th style="text-align:left; padding: 0.5rem;">ICHRA Revenue Stack</th></tr>
+                        <tr><td style="padding: 0.4rem;">Base Commission: ~$30 PEPM</td><td style="padding: 0.4rem;">Base Commission: ~$20 PEPM (Individual)</td></tr>
+                        <tr><td style="padding: 0.4rem;">Consulting Fee: $0 (included)</td><td style="padding: 0.4rem;">Consulting Fee: +$25–$50 PEPM (Employer Paid)</td></tr>
+                        <tr><td style="padding: 0.4rem;"></td><td style="padding: 0.4rem;">Ancillary Bundle: +$10 PEPM (Group Dental/Vision/Life)</td></tr>
+                        <tr style="font-weight: 700;"><td style="padding: 0.4rem; border-top: 2px solid var(--accent-gold-dark);">Total: ~$30/employee</td><td style="padding: 0.4rem; border-top: 2px solid var(--accent-gold-dark);">Total: ~$55+/employee</td></tr>
+                    </table>
+                    <p>By charging a professional fee for the strategy — something employers are happy to pay for budget certainty — you decouple your income from the carrier's whims.</p>
+                    <span class="source-badge">Source: Training Manual — Module 8 (Revenue Stack)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How do I protect my agency from platforms that steal AOR and commissions?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The Training Manual devotes an entire section to this threat. Many "Direct-to-Employer" tech firms use <strong>Enhanced Direct Enrollment (EDE)</strong> pathways to silently insert their own NPN into applications — stealing your commission.</p>
+                    <p><strong>The three-step defense strategy:</strong></p>
+                    <ol>
+                        <li><strong>Hard-code your NPN:</strong> Verify your NPN is embedded in every shopping link. Test links yourself before sending to employees</li>
+                        <li><strong>Contract review:</strong> Read your TPA agreement. Look for "TPA agrees to not act as Producer of Record." If missing, demand it be added</li>
+                        <li><strong>Broker Designation Form:</strong> For Off-Exchange carriers, have each employee sign a Broker Designation Form during onboarding — it "locks" you in with the carrier</li>
+                    </ol>
+                    <p><a href="/lies">Read about the 3 biggest lies in the ICHRA industry →</a></p>
+                    <span class="source-badge">Source: Training Manual — Module 8 (Protecting the AOR)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How do I transition existing group plan clients to ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The transition process from the Training Manual follows a structured execution timeline:</p>
+                    <ol>
+                        <li><strong>Phase 1 — Qualify:</strong> Run the "Anti-Pitch" analysis. Verify ICHRA is a fit using network heat maps and census data. Identify non-fits (Network Deserts, small/old groups)</li>
+                        <li><strong>Phase 2 — Design:</strong> Collect census data, design employee classes, set contribution amounts, run affordability stress tests</li>
+                        <li><strong>Phase 3 — Implement:</strong> Select TPA, generate legal documents (Section 105 Plan Document, Section 125 POP, Wrap Document), set up payroll integration</li>
+                        <li><strong>Phase 4 — Enroll:</strong> Send 90-Day Notice of Offer, guide employee shopping, collect waivers from those who decline</li>
+                        <li><strong>Phase 5 — Operate:</strong> Monthly attestation, TPA substantiation, quarterly Section 111 reporting</li>
+                        <li><strong>Phase 6 — Renew:</strong> Annual affordability recalibration, LCSP benchmark audit, contribution adjustment</li>
+                    </ol>
+                    <p><strong>Critical step:</strong> Execute the <strong>"Kill Switch"</strong> — explicitly cancel the legacy group plan effective 11:59 PM the day before ICHRA starts. Get written confirmation from the carrier.</p>
+                    <p><a href="/transitioning-book-of-business-ichra">Read the full transition guide →</a></p>
+                    <span class="source-badge">Source: Training Manual — Modules 6 & 11 (Execution Timeline)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SECTION 10: OPERATIONS ==================== -->
+        <h2 class="faq-category-title gs-reveal" id="operations">Operations & Renewals</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What compliance filings are required for ICHRA throughout the year?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>From the Training Manual's <strong>Compliance Calendar</strong>:</p>
+                    <ul>
+                        <li><strong>Daily/Monthly:</strong> TPA handles substantiation (receipt checking) and monthly attestation. If an employee stops paying premiums, the TPA suspends the account automatically</li>
+                        <li><strong>Quarterly:</strong> <a href="https://www.cms.gov/medicare/coordination-benefits-recovery-overview/mandatory-insurer-reporting-group-health-plans" target="_blank" rel="noopener">Section 111 (MMSEA) reports</a> to CMS for groups with 20+ employees — prevents Medicare from paying "Primary" by mistake. Failure to file: up to $1,000/day per claimant</li>
+                        <li><strong>January 31:</strong> <a href="https://www.irs.gov/pub/irs-pdf/i109495c.pdf" target="_blank" rel="noopener">Form 1095-C</a> (for ALEs 50+) with specific codes (1L, 1M, 1N) proving affordability. W-2 reporting updated</li>
+                        <li><strong>July 31:</strong> <a href="https://www.irs.gov/newsroom/patient-centered-outcomes-research-institute-fee" target="_blank" rel="noopener">Form 720 (PCORI Fee)</a> — a small IRS tax (~$3–4 per head) to fund research. Also Form 5500 for plans with 100+ participants</li>
+                        <li><strong>October 15:</strong> <a href="https://www.cms.gov/medicare/employers-plan-sponsors/creditable-coverage/model-notice-letters" target="_blank" rel="noopener">Medicare Part D Creditable Coverage Notice</a> — tells employees if their drug coverage is "as good as Medicare"</li>
+                    </ul>
+                    <span class="source-badge">Source: Training Manual — Module 7 (Compliance Calendar)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How do ICHRA annual renewals work?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>ICHRA renewal is fundamentally different from group renewals. It's a <strong>math adjustment, not a negotiation</strong>.</p>
+                    <ol>
+                        <li><strong>The 90-Day Reset:</strong> Re-issue the Notice of Offer 90 days before the renewal date (by October 3rd for a January 1st renewal) to trigger the new SEP</li>
+                        <li><strong>Affordability Stress Test:</strong> Use the quoting platform to re-run LCSP data for each employee. Check whether contributions still meet the affordability threshold (9.96% for 2026)</li>
+                        <li><strong>Buffer Strategy:</strong> Don't design contributions to hit exactly the IRS limit. Aim for 0.5%–1.0% lower (e.g., target 9.0% when the limit is 9.96%) to create a safety margin against carrier rate increases</li>
+                        <li><strong>Client retention:</strong> Present the renewal as a budget recalibration, not a rate increase. Show the employer exactly what changed and why</li>
+                    </ol>
+                    <span class="source-badge">Source: Training Manual — Modules 9 & 10 (Annual Renewals)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What legal documents are required to set up an ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The Training Manual lists five mandatory compliance documents — the "Paper Shield":</p>
+                    <ol>
+                        <li><strong>Section 105 HRA Plan Document & SPD:</strong> The legal foundation. Without it, the IRS treats every dollar given to employees as taxable wages, not a tax-free benefit</li>
+                        <li><strong>Section 125 POP Document:</strong> Allows employees to pay their share of premiums pre-tax. Must be signed and current (within 5 years)</li>
+                        <li><strong>Section 105 "Wrap" Document:</strong> Bundles the ICHRA, Dental, and Vision into a single ERISA welfare benefit plan — simplifying compliance by requiring only one Form 5500 instead of three</li>
+                        <li><strong>Privacy Officer Designation:</strong> An internal memo appointing someone (usually the HR Director) to handle HIPAA issues. Required even though the TPA handles the data</li>
+                        <li><strong><a href="https://www.law.cornell.edu/uscode/text/29/1112" target="_blank" rel="noopener">ERISA Fidelity Bond:</a></strong> Insurance protection against theft of plan assets. Required by the <a href="https://www.dol.gov/agencies/ebsa/employers-and-advisers/plan-administration-and-compliance/reporting-and-filing/form-5500" target="_blank" rel="noopener">Department of Labor</a> if the plan handles employee money. Cost: ~$100/year</li>
+                    </ol>
+                    <span class="source-badge">Source: Training Manual — Module 6 (Legal Setup)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What states have individual health insurance mandates that affect ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>While federal ICHRA rules are universal, the rise of remote work has exposed employers to <strong>state-level individual mandates and reporting requirements</strong>. If a Texas company hires one remote worker in New Jersey, they must comply with NJ reporting laws.</p>
+                    <p><strong>The "Watch List" states (from the Training Manual):</strong></p>
+                    <ul>
+                        <li><strong>California:</strong> Must file Form 1094/1095-C with the Franchise Tax Board by March 31</li>
+                        <li><strong>New Jersey:</strong> Must file via MFT SecureTransport by March 31</li>
+                        <li><strong>Massachusetts:</strong> Requires Form 1099-HC distribution by January 31</li>
+                        <li><strong>Rhode Island & DC:</strong> Distinct filing deadlines in March/April</li>
+                    </ul>
+                    <p><strong>Agent strategy:</strong> When selecting a TPA, specifically ask: "Does your system track state-level filing for CA, NJ, and MA?" If not, you must charge a consulting fee to handle it manually.</p>
+                    <span class="source-badge">Source: Training Manual — Module 9 (State-Specific Reporting)</span>
                 </div>
             </div>
         </div>
 
         <!-- CTA -->
-        <div class="gs-reveal" style="margin-top: 4rem; text-align: center; padding: 3rem; background: var(--brand-blue); border-radius: 16px;">
-            <h2 style="font-family: 'Playfair Display', serif; color: #ffffff; font-size: 2rem; margin-bottom: 1rem;">Still have questions?</h2>
-            <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">Talk to an ICHRA Architect and get personalized answers about how our platform fits your agency.</p>
-            <a href="/contact" class="glass-btn primary" style="background: var(--accent-gold-dark); color: #ffffff; border: none; font-size: 1.1rem; padding: 1rem 2.5rem;">Schedule a Strategy Call</a>
+        <div class="gs-reveal" style="margin-top: 4rem; text-align: center; padding: 3rem 2rem; background: var(--brand-blue); border-radius: 16px;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #ffffff; font-size: 2rem; margin-bottom: 1rem;">Ready to see ICHRA Masters in action?</h2>
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; font-size: 1rem; line-height: 1.7;">Talk to an ICHRA Architect and get a personalized demo. See how real-time quoting, seamless enrollment, and AOR protection work on one platform.</p>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <a href="/contact" class="glass-btn primary" style="background: var(--accent-gold-dark); color: #ffffff; border: none; font-size: 1.1rem; padding: 1rem 2.5rem;">Schedule a Strategy Call</a>
+                <a href="/what-is-ichra" style="color: rgba(255,255,255,0.7); font-size: 0.9rem; text-decoration: underline;">Learn more about ICHRA →</a>
+            </div>
         </div>
 
     </section>
 
-    <!-- Professional Footer -->
+    <!-- Footer -->
     <footer class="modern-footer">
         <div class="footer-container">
             <div class="footer-brand">
@@ -432,7 +1204,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
     <script src="app.js" defer></script>
     <script>
-        // Close mobile menu on link click
         document.querySelectorAll('.nav-links a').forEach(function(link) {
             link.addEventListener('click', function() {
                 document.querySelector('.nav-links').classList.remove('open');
