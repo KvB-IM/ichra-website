@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions About ICHRA | ICHRA Masters</title>
+    <meta name="description" content="Get answers to the most common questions about ICHRA, how it works for brokers, quoting, enrollment, commissions, and why ICHRA Masters is different from other platforms.">
+    <meta name="keywords" content="ICHRA FAQ, ICHRA questions, what is ICHRA, ICHRA for brokers, ICHRA enrollment, ICHRA quoting, ICHRA commissions, ICHRA AOR">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .inner-page-header {
+            padding: 8rem 5% 3rem;
+            background: var(--brand-blue);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .faq-section {
+            padding: 4rem 5%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--text-main);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent-gold-dark);
+        }
+
+        .faq-category-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+            background: #ffffff;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-color: var(--accent-gold-dark);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            gap: 1rem;
+            line-height: 1.5;
+        }
+
+        .faq-question:hover {
+            color: var(--brand-blue);
+        }
+
+        .faq-chevron {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+            color: var(--accent-gold-dark);
+        }
+
+        .faq-item.open .faq-chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-inner {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .faq-answer-inner strong {
+            color: var(--text-main);
+        }
+    </style>
+
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is ICHRA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ICHRA (Individual Coverage Health Reimbursement Arrangement) is a health benefit model where employers provide a fixed, tax-free monthly allowance for employees to purchase their own individual health insurance plans on the open market. Unlike traditional group health insurance, ICHRA gives employees the freedom to choose plans that fit their unique needs while giving employers predictable, controlled costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is ICHRA different from traditional group health insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional group insurance uses a defined benefit model — the employer selects one plan for all employees. ICHRA uses a defined contribution model — the employer sets a monthly allowance and each employee chooses their own individual plan. ICHRA offers more flexibility, personalization, and cost predictability for both employers and employees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is ICHRA Masters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ICHRA Masters is a platform built specifically for licensed health insurance agents to quote, model, and enroll ICHRAs in real-time. Unlike other ICHRA platforms that require brokers to sign over their Agent of Record (AOR), ICHRA Masters lets agents keep 100% of their commissions and maintain full control of their book of business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to sign over my AOR to use ICHRA Masters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely not. ICHRA Masters was built on the principle that agents should never have to surrender their Agent of Record (AOR) to access ICHRA technology. You retain 100% ownership of your book of business, your commissions, and your client relationships."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does ICHRA Masters cost to get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's free to get started with ICHRA Masters. There is no upfront cost to begin quoting and enrolling ICHRAs. Schedule a strategy call to learn about the complete pricing model and how ICHRA Masters fits into your agency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I quote ICHRA in real-time with my clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ICHRA Masters provides a live quoting engine that lets you generate real-time ICHRA quotes while sitting with your clients. There is no need to send quotes to a third party and wait for them to come back. You control the entire quoting process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What size employers can use ICHRA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ICHRA has no minimum or maximum employer size requirement. Any employer, from a 1-person company to a Fortune 500 corporation, can offer an ICHRA. It is especially popular with small and mid-sized businesses (SMBs) that want cost-predictable health benefits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ICHRA compliant with ACA requirements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ICHRA was officially established by a federal rule in June 2019 and is fully compliant with the Affordable Care Act (ACA). Employers who offer an ICHRA that meets affordability requirements satisfy the ACA employer mandate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I transition my group plan clients to ICHRA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The transition process involves modeling the employer's current costs, designing employee classes, setting contribution amounts, and guiding employees through individual plan selection. ICHRA Masters provides the software infrastructure to handle every step of this process while you maintain the client relationship."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is ICHRA Masters based?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ICHRA Masters is based in North Augusta, Georgia, and serves licensed health insurance agents nationwide across the United States."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ichramasters.com/" },
+        { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://ichramasters.com/faq" }
+      ]
+    }
+    </script>
+
+    <link rel="canonical" href="https://ichramasters.com/faq">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ichramasters.com/faq">
+    <meta property="og:title" content="Frequently Asked Questions About ICHRA | ICHRA Masters">
+    <meta property="og:description" content="Get answers to the most common questions about ICHRA, how it works for brokers, quoting, enrollment, commissions, and why ICHRA Masters is different.">
+    <meta property="og:site_name" content="ICHRA Masters">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Frequently Asked Questions About ICHRA | ICHRA Masters">
+    <meta name="twitter:description" content="Get answers to the most common questions about ICHRA, how it works for brokers, quoting, enrollment, commissions, and why ICHRA Masters is different.">
+</head>
+
+<body class="modern-body">
+
+    <!-- Top Navigation -->
+    <nav class="top-navbar">
+        <a href="/" class="nav-brand">
+            <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
+        </a>
+        <button class="hamburger-btn" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open');" aria-label="Toggle Menu"><span></span><span></span><span></span></button><div class="nav-links">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/what-is-ichra" class="nav-btn">What is ICHRA?</a>
+            <a href="/lies" class="nav-btn">Three Lies</a>
+            <a href="/blogs" class="nav-btn">Blogs</a>
+            <a href="/contact" class="nav-btn">Contact Us</a>
+            <a href="https://agents.ichramasters.com/login" class="portal-btn">Login</a>
+        </div>
+    </nav>
+
+    <header class="inner-page-header gs-reveal">
+        <div class="accent-mark" style="margin: 0 auto 1.5rem; text-align: center;">✦</div>
+        <h1 class="modern-title" style="color: #ffffff;">Frequently Asked <span class="text-gradient-gold">Questions</span></h1>
+        <p class="section-text" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">
+            Everything you need to know about ICHRA and how ICHRA Masters puts agents back in control.
+        </p>
+    </header>
+
+    <section class="faq-section">
+
+        <!-- Category: ICHRA Basics -->
+        <h2 class="faq-category-title gs-reveal">About ICHRA</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What is ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>ICHRA (Individual Coverage Health Reimbursement Arrangement)</strong> is a health benefit model where employers provide a fixed, tax-free monthly allowance for employees to purchase their own individual health insurance plans on the open market.</p>
+                    <p>Unlike traditional group health insurance where the employer selects one plan for everyone, ICHRA gives employees the freedom to choose plans that fit their unique needs while giving employers predictable, controlled costs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How is ICHRA different from traditional group health insurance?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>Traditional group insurance</strong> uses a <em>defined benefit</em> model — the employer selects one plan (or a few options) for all employees.</p>
+                    <p><strong>ICHRA</strong> uses a <em>defined contribution</em> model — the employer sets a monthly allowance and each employee chooses their own individual plan. This means more flexibility, more personalization, and more cost predictability for both sides.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What size employers can use ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>ICHRA has <strong>no minimum or maximum employer size requirement</strong>. Any employer — from a 1-person company to a Fortune 500 corporation — can offer an ICHRA. It is especially popular with small and mid-sized businesses (SMBs) that want cost-predictable health benefits without the complexity of traditional group plans.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Is ICHRA compliant with ACA requirements?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>Yes. ICHRA was officially established by a <strong>federal rule in June 2019</strong> and is fully compliant with the Affordable Care Act (ACA). Employers who offer an ICHRA that meets affordability requirements satisfy the ACA employer mandate.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: ICHRA Masters Platform -->
+        <h2 class="faq-category-title gs-reveal">About ICHRA Masters</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What is ICHRA Masters?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>ICHRA Masters is a platform built <strong>specifically for licensed health insurance agents</strong> to quote, model, and enroll ICHRAs in real-time. Unlike other ICHRA platforms that require brokers to sign over their Agent of Record (AOR), ICHRA Masters lets agents keep 100% of their commissions and maintain full control of their book of business.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal open">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Do I need to sign over my AOR to use ICHRA Masters?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p><strong>Absolutely not.</strong> ICHRA Masters was built on the principle that agents should never have to surrender their Agent of Record (AOR) to access ICHRA technology. You retain 100% ownership of your book of business, your commissions, and your client relationships. This is a core principle of the platform.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How much does ICHRA Masters cost to get started?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>It's <strong>free to get started</strong> with ICHRA Masters. There is no upfront cost to begin quoting and enrolling ICHRAs. <a href="/contact" style="color: var(--brand-blue); font-weight: 600;">Schedule a strategy call</a> to learn about the complete pricing model and how ICHRA Masters fits into your agency.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Can I quote ICHRA in real-time with my clients?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>Yes. ICHRA Masters provides a <strong>live quoting engine</strong> that lets you generate real-time ICHRA quotes while sitting with your clients. There is no need to send quotes to a third party and wait for them to come back — you control the entire quoting process from start to finish.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: For Brokers -->
+        <h2 class="faq-category-title gs-reveal">For Brokers & Agents</h2>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How do I transition my group plan clients to ICHRA?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>The transition involves: <strong>modeling the employer's current costs</strong>, designing employee classes, setting contribution amounts, and guiding employees through individual plan selection. ICHRA Masters provides the software infrastructure to handle every step of this process while you maintain the client relationship.</p>
+                    <p><a href="/blogs" style="color: var(--brand-blue); font-weight: 600;">Read our guide on transitioning to ICHRA →</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item gs-reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Where is ICHRA Masters based?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p>ICHRA Masters is based in <strong>North Augusta, Georgia</strong>, and serves licensed health insurance agents <strong>nationwide across the United States</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="gs-reveal" style="margin-top: 4rem; text-align: center; padding: 3rem; background: var(--brand-blue); border-radius: 16px;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #ffffff; font-size: 2rem; margin-bottom: 1rem;">Still have questions?</h2>
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">Talk to an ICHRA Architect and get personalized answers about how our platform fits your agency.</p>
+            <a href="/contact" class="glass-btn primary" style="background: var(--accent-gold-dark); color: #ffffff; border: none; font-size: 1.1rem; padding: 1rem 2.5rem;">Schedule a Strategy Call</a>
+        </div>
+
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="ICHRA Masters Branding.svg" alt="ICHRA Masters Logo" />
+                <p class="footer-tagline">Built for Agents, By Agents.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="/lies">The Lies</a>
+                    <a href="/model">The Model</a>
+                    <a href="https://agents.ichramasters.com/login">Agent Portal</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Strategy Call</a>
+                    <a href="/blogs">Insights</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="mailto:service@ichramasters.com" style="color: var(--accent-gold-light); font-weight: 500;">service@ichramasters.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ICHRA Masters. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="app.js" defer></script>
+    <script>
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('open');
+                document.querySelector('.hamburger-btn').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>

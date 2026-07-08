@@ -8,6 +8,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
@@ -40,6 +41,19 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="What is an ICHRA and Why Should Health Insurance Brokers Care? | ICHRA Masters Blog">
     <meta name="twitter:description" content="Discover how ICHRAs are transforming the health insurance market and why licensed agents must adapt to stay ahead.">
+
+    <!-- BreadcrumbList JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ichramasters.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ichramasters.com/blogs" },
+        { "@type": "ListItem", "position": 3, "name": "What is an ICHRA and Why Should Brokers Care?", "item": "https://ichramasters.com/what-is-ichra-brokers-care" }
+      ]
+    }
+    </script>
 </head>
 
 <body class="modern-body">
@@ -120,9 +134,9 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="app.js" defer></script>
     <script>
         // Close mobile menu on link click
         document.querySelectorAll('.nav-links a').forEach(function(link) {

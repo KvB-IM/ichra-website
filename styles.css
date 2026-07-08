@@ -281,13 +281,30 @@ h1, h2, h3, .serif {
         max-width: 100%;
     }
     .hero-text .hero-actions {
-        margin-top: 1rem !important;
+        margin-top: 1.5rem !important;
         justify-content: center !important;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         gap: 0.75rem !important;
     }
+    .hero-text .hero-actions .glass-btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+    /* Stats grid: consistent 2x2 with proper alignment */
     .hero-stats-grid {
-        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .stat-item {
+        background: rgba(18, 64, 110, 0.04);
+        border-radius: 10px;
+        padding: 1rem 0.8rem 1rem 1rem;
+        border-left: 3px solid var(--accent-gold-dark);
     }
     .cta-actions {
         justify-content: center;
@@ -316,6 +333,26 @@ h1, h2, h3, .serif {
     }
     .grid-2-col {
         grid-template-columns: 1fr;
+    }
+    /* Feature bars responsive */
+    .feature-bar {
+        gap: 1.2rem !important;
+        padding: 1rem 1.2rem !important;
+    }
+    .feature-bar .feature-bar-icon {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px;
+    }
+    .feature-bar .feature-bar-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    .feature-bar h3 {
+        font-size: 1.05rem !important;
+    }
+    .feature-bar p {
+        font-size: 0.85rem !important;
     }
     .footer-container {
         flex-direction: column;
@@ -375,8 +412,15 @@ h1, h2, h3, .serif {
         font-size: 1rem;
     }
     .hero-stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        max-width: 340px;
+    }
+    .stat-value {
+        font-size: 1.1rem;
+    }
+    .stat-label {
+        font-size: 0.7rem;
     }
     .section-title {
         font-size: clamp(1.6rem, 6vw, 2.2rem);
