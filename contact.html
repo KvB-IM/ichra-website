@@ -42,6 +42,31 @@
             border-radius: 8px;
         }
 
+        .meeting-section {
+            padding: 0 5%;
+        }
+
+        /* The scheduler widget needs width to render without clipping, so the
+           card goes near-full-bleed on narrow screens. These rules live here
+           rather than in styles.css because this block loads after it. */
+        @media (max-width: 768px) {
+            .meeting-section {
+                padding: 0 0.5rem;
+            }
+            .meeting-container {
+                padding: 0.5rem;
+                margin: -1rem auto 2rem;
+                border-radius: 12px;
+            }
+            /* Tall enough that the details-form step fits without the widget
+               needing its own inner scrollbar. Zoho's inline embed can't
+               auto-resize, so sizing for the tallest step avoids a nested
+               scroll region competing with the page. */
+            .meeting-container iframe {
+                min-height: 1000px;
+            }
+        }
+
         .contact-info-strip {
             display: flex;
             justify-content: center;
@@ -155,10 +180,14 @@
         </p>
     </header>
 
-    <!-- HubSpot Meeting Embed -->
-    <section style="padding: 0 5%;">
+    <!-- Zoho Bookings Embed -->
+    <section class="meeting-section">
         <div class="meeting-container gs-reveal">
-            <iframe src="https://meet.ichramasters.com/meetings/mario-roker" title="Schedule a Strategy Call with ICHRA Masters"></iframe>
+            <!-- embed.js auto-initializes this on DOMContentLoaded and replaces the
+                 div's contents with a 100%-width iframe. The library does no
+                 auto-resizing, so responsive height lives in CSS below. -->
+            <div data-bookings-inline="https://ichramasters1.zohobookings.com/portal-embed#/4946159000000037071"
+                 data-height="600px"></div>
         </div>
     </section>
 
@@ -243,6 +272,8 @@
             }
         });
     </script>
+    <!-- Zoho Bookings Scheduler -->
+    <script src="https://bookings.nimbuspop.com/assets/embed.js" defer></script>
     <script>
         // Close mobile menu on link click
         document.querySelectorAll('.nav-links a').forEach(function(link) {
